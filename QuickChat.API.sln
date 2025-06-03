@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickChat.API", "QuickChat.API\QuickChat.API.csproj", "{BAA454C3-2027-467F-A97B-3C4B08023082}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickChat.Client", "QuickChat.Client\QuickChat.Client.csproj", "{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAA454C3-2027-467F-A97B-3C4B08023082}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAA454C3-2027-467F-A97B-3C4B08023082}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAA454C3-2027-467F-A97B-3C4B08023082}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAA454C3-2027-467F-A97B-3C4B08023082}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {89DE78FB-296B-4081-AC64-983CF62DF0D1}
+	EndGlobalSection
+EndGlobal
