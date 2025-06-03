@@ -4,24 +4,24 @@
         Title="Вход в QuickChat" 
         Height="350" Width="400"
         WindowStartupLocation="CenterScreen"
-        Background="{StaticResource DarkBackground}">
+        Background="{StaticResource LightBrush}">
 
     <Grid>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="300">
             <TextBlock Text="QuickChat" 
-                       Foreground="{StaticResource TextColor}"
+                       Foreground="{StaticResource TextBrush}"
                        FontSize="24"
                        HorizontalAlignment="Center"
                        Margin="0,0,0,20"/>
 
             <TextBlock Text="Логин:" 
-                       Foreground="{StaticResource TextColor}"
+                       Foreground="{StaticResource TextBrush}"
                        Margin="5"/>
             <TextBox x:Name="UsernameBox" 
                      Margin="5"/>
 
             <TextBlock Text="Пароль:" 
-                       Foreground="{StaticResource TextColor}"
+                       Foreground="{StaticResource TextBrush}"
                        Margin="5,15,5,5"/>
             <PasswordBox x:Name="PasswordBox" 
                          Margin="5"/>

@@ -8,6 +8,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using QuickChat.Client.Services;
+
 
 namespace QuickChat.Client
 {
@@ -16,6 +18,7 @@ namespace QuickChat.Client
     /// </summary>
     public partial class MainWindow : Window
     {
+        private readonly ChatService _chatService = new ChatService();
         public MainWindow()
         {
             InitializeComponent();

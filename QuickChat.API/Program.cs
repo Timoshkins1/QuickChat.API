@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using QuickChat.API.Services;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -40,5 +41,6 @@ app.UseAuthorization();
 
 app.MapControllers();
 app.MapHub<ChatHub>("/chatHub");
-
+builder.Services.AddScoped<AuthService>();
+builder.Services.AddScoped<ChatService>();
 app.Run();

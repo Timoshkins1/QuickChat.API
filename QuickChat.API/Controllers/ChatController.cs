@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using QuickChat.API.Models;
 
 [ApiController]
 [Route("api/chats")]

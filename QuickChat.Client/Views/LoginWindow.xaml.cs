@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using QuickChat.Client.Services;
 
 namespace QuickChat.Client
 {
@@ -19,6 +20,7 @@ namespace QuickChat.Client
     /// </summary>
     public partial class LoginWindow : Window
     {
+        private readonly ApiService _apiService = new ApiService();
         public LoginWindow()
         {
             InitializeComponent();

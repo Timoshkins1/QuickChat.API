@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuickChat.Client.ViewModels
 {
+
     internal class LoginViewModel
     {
     }

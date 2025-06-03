@@ -4,7 +4,7 @@
         Title="QuickChat" 
         Height="500" Width="800"
         WindowStartupLocation="CenterScreen"
-        Background="{StaticResource DarkBackground}">
+        Background="{StaticResource LightBrush}">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -13,10 +13,10 @@
         </Grid.ColumnDefinitions>
 
         <!-- Боковая панель -->
-        <Border Grid.Column="0" Background="{StaticResource LightBackground}">
+        <Border Grid.Column="0" Background="{StaticResource LightBrush}">
             <StackPanel>
                 <TextBlock Text="Чаты" 
-                           Foreground="{StaticResource TextColor}"
+                           Foreground="{StaticResource TextBrush}"
                            FontSize="16"
                            Margin="10"/>
 
@@ -24,7 +24,7 @@
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding Name}" 
-                                       Foreground="{StaticResource TextColor}"
+                                       Foreground="{StaticResource TextBrush}"
                                        Margin="5"/>
                         </DataTemplate>
                     </ListView.ItemTemplate>
@@ -46,7 +46,7 @@
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <TextBlock Text="{Binding Text}" 
-                                   Foreground="{StaticResource TextColor}"
+                                   Foreground="{StaticResource TextBrush}"
                                    Margin="5"/>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
