@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using QuickChat.API.Models;
 
-namespace QuickChat.API.Models
+public class Chat
 {
-    public class Chat
-    {
-        public Guid Id { get; set; }
-        public string Name { get; set; }
-        public bool IsGroup { get; set; }
+    public Guid Id { get; set; }
+    public string Name { get; set; }
+    public string PasswordHash { get; set; } // храним хеш пароля
+    public bool IsGroup { get; set; } = true;
 
-        public ICollection<UserChat> UserChats { get; set; }
-        public ICollection<Message> Messages { get; set; }
-    }
+    public List<UserChat> UserChats { get; set; }
+    public List<Message> Messages { get; set; }
 }

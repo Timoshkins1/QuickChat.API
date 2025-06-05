@@ -152,6 +152,7 @@ C:\Users\Student\Desktop\ChatProject\QuickChat.API\QuickChat.API\bin\Debug\net8.
 C:\Users\Student\Desktop\ChatProject\QuickChat.API\QuickChat.API\obj\Debug\net8.0\QuickChat.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\user\Source\Repos\delivery\QuickChat.API\QuickChat.API\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\user\Source\Repos\delivery\QuickChat.API\QuickChat.API\bin\Debug\net8.0\appsettings.json
+C:\Users\user\Source\Repos\delivery\QuickChat.API\QuickChat.API\bin\Debug\net8.0\libman.json
 C:\Users\user\Source\Repos\delivery\QuickChat.API\QuickChat.API\bin\Debug\net8.0\QuickChat.API.staticwebassets.runtime.json
 C:\Users\user\Source\Repos\delivery\QuickChat.API\QuickChat.API\bin\Debug\net8.0\QuickChat.API.staticwebassets.endpoints.json
 C:\Users\user\Source\Repos\delivery\QuickChat.API\QuickChat.API\bin\Debug\net8.0\QuickChat.API.exe
@@ -303,4 +304,3 @@ C:\Users\user\Source\Repos\delivery\QuickChat.API\QuickChat.API\obj\Debug\net8.0
 C:\Users\user\Source\Repos\delivery\QuickChat.API\QuickChat.API\obj\Debug\net8.0\QuickChat.API.pdb
 C:\Users\user\Source\Repos\delivery\QuickChat.API\QuickChat.API\obj\Debug\net8.0\QuickChat.API.genruntimeconfig.cache
 C:\Users\user\Source\Repos\delivery\QuickChat.API\QuickChat.API\obj\Debug\net8.0\ref\QuickChat.API.dll
-C:\Users\user\Source\Repos\delivery\QuickChat.API\QuickChat.API\bin\Debug\net8.0\libman.json

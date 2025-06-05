@@ -22,6 +22,28 @@ namespace QuickChat.API.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("Chat", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<bool>("IsGroup")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("PasswordHash")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Chats");
+                });
+
             modelBuilder.Entity("Message", b =>
                 {
                     b.Property<Guid>("Id")
@@ -37,6 +59,10 @@ namespace QuickChat.API.Migrations
                     b.Property<Guid>("SenderId")
                         .HasColumnType("uuid");
 
+                    b.Property<string>("SenderName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<DateTime>("SentAt")
                         .HasColumnType("timestamp with time zone");
 
@@ -44,34 +70,13 @@ namespace QuickChat.API.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<Guid?>("UserId")
-                        .HasColumnType("uuid");
-
                     b.HasKey("Id");
 
                     b.HasIndex("ChatId");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("SenderId");
 
                     b.ToTable("Messages");
-                });
-
-            modelBuilder.Entity("QuickChat.API.Models.Chat", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<bool>("IsGroup")
-                        .HasColumnType("boolean");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Chats");
                 });
 
             modelBuilder.Entity("QuickChat.API.Models.User", b =>
@@ -103,7 +108,7 @@ namespace QuickChat.API.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("UserChat", b =>
+            modelBuilder.Entity("QuickChat.API.Models.UserChat", b =>
                 {
                     b.Property<Guid>("UserId")
                         .HasColumnType("uuid");
@@ -120,20 +125,26 @@ namespace QuickChat.API.Migrations
 
             modelBuilder.Entity("Message", b =>
                 {
-                    b.HasOne("QuickChat.API.Models.Chat", null)
+                    b.HasOne("Chat", "Chat")
                         .WithMany("Messages")
                         .HasForeignKey("ChatId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("QuickChat.API.Models.User", null)
+                    b.HasOne("QuickChat.API.Models.User", "Sender")
                         .WithMany("Messages")
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("SenderId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Chat");
+
+                    b.Navigation("Sender");
                 });
 
-            modelBuilder.Entity("UserChat", b =>
+            modelBuilder.Entity("QuickChat.API.Models.UserChat", b =>
                 {
-                    b.HasOne("QuickChat.API.Models.Chat", "Chat")
+                    b.HasOne("Chat", "Chat")
                         .WithMany("UserChats")
                         .HasForeignKey("ChatId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -150,7 +161,7 @@ namespace QuickChat.API.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("QuickChat.API.Models.Chat", b =>
+            modelBuilder.Entity("Chat", b =>
                 {
                     b.Navigation("Messages");
 

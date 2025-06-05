@@ -1,5 +1,6 @@
 ﻿using QuickChat.Client.Models;
 using QuickChat.Client.Services;
+using QuickChat.Client.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -83,20 +84,29 @@ namespace QuickChat.Client
             MessagesList.ItemsSource = _chatMessages[_currentChatId];
         }
 
-        private async void CreateChat_Click(object sender, RoutedEventArgs e)
+        private void CreateChat_Click(object sender, RoutedEventArgs e)
         {
-            var input = Microsoft.VisualBasic.Interaction.InputBox("Введите имя нового чата:", "Новый чат");
-            if (!string.IsNullOrWhiteSpace(input))
+            var regWindow = new RegisterChatWindow();
+            if (regWindow.ShowDialog() == true)
             {
-                await _apiService.CreateChatAsync(input);
-                var chat = new ChatItem { Name = input, Id = Guid.NewGuid() };
-                Chats.Add(chat);
-                _currentChatId = chat.Id;
-                ShowMessagesForCurrentChat();
-                ChatsList.SelectedItem = chat;
+                var newChatId = regWindow.CreatedChatId;
+                var newChatName = regWindow.CreatedChatName;
+
+                Chats.Add(new ChatItem { Id = newChatId, Name = newChatName });
             }
         }
 
+        private void JoinChat_Click(object sender, RoutedEventArgs e)
+        {
+            var joinWindow = new JoinChatWindow();
+            if (joinWindow.ShowDialog() == true)
+            {
+                var chatId = joinWindow.JoinedChatId;
+                var chatName = joinWindow.JoinedChatName;
+
+                Chats.Add(new ChatItem { Id = chatId, Name = chatName });
+            }
+        }
         private void ChatsList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (ChatsList.SelectedItem is ChatItem selected)

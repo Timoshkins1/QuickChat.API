@@ -1,8 +1,10 @@
 ﻿<Window x:Class="QuickChat.Client.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:models="clr-namespace:QuickChat.Client.Models"
-        Title="QuickChat" Height="500" Width="800" WindowStartupLocation="CenterScreen">
+        Title="QuickChat"
+        Height="500" Width="800"
+        WindowStartupLocation="CenterScreen"
+        Background="{StaticResource LightBrush}">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -10,44 +12,37 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <!-- Чаты -->
-        <Border Grid.Column="0" Background="#F0F0F0">
-            <StackPanel>
-                <TextBlock Text="Чаты" FontSize="16" FontWeight="Bold" Margin="10"/>
-                <Button Content="➕ Новый чат" Margin="10,0,10,10" Click="CreateChat_Click"/>
-                <ListView x:Name="ChatsList" SelectionChanged="ChatsList_SelectionChanged">
-                    <ListView.ItemTemplate>
-                        <DataTemplate DataType="{x:Type models:ChatItem}">
-                            <TextBlock Text="{Binding Name}" Margin="5"/>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-            </StackPanel>
-        </Border>
+        <!-- Левая панель -->
+        <StackPanel Grid.Column="0" Background="{StaticResource DarkBrush}">
+            <Button Content="Создать чат" Margin="5" Click="CreateChat_Click"/>
 
-        <!-- Сообщения -->
+            <Button Content="Подключиться к чату" Margin="5" Click="JoinChat_Click"/>
+
+            <TextBlock Text="Ваши чаты" FontWeight="Bold" Margin="5"/>
+            <ListBox x:Name="ChatsList" DisplayMemberPath="Name" SelectionChanged="ChatsList_SelectionChanged" Margin="5"/>
+        </StackPanel>
+
+        <!-- Правая панель -->
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
-            <ListBox x:Name="MessagesList" Margin="10" BorderThickness="0" Background="White">
+            <ListBox x:Name="MessagesList" Background="Transparent" BorderThickness="0" Margin="10">
                 <ListBox.ItemTemplate>
-                    <DataTemplate DataType="{x:Type models:MessageItem}">
-                        <Border Background="{Binding IsMine, Converter={StaticResource BoolToColorConverter}}"
-                                HorizontalAlignment="{Binding IsMine, Converter={StaticResource BoolToAlignConverter}}"
-                                CornerRadius="10" Padding="10" Margin="5">
-                            <TextBlock Text="{Binding Text}" TextWrapping="Wrap"/>
-                        </Border>
+                    <DataTemplate>
+                        <StackPanel HorizontalAlignment="{Binding IsMine, Converter={StaticResource MessageAlignConverter}}">
+                            <TextBlock Text="{Binding Sender}" FontWeight="Bold" Foreground="LightGray" Margin="0,0,0,2"/>
+                            <TextBlock Text="{Binding Text}" Background="{Binding IsMine, Converter={StaticResource MessageColorConverter}}" Padding="10" Margin="0,0,0,10"/>
+                        </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
 
-            <!-- Ввод -->
             <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="10">
-                <TextBox x:Name="MessageBox" Width="600" Margin="0,0,10,0"/>
-                <Button Content="Отправить" Width="100" Click="SendButton_Click"/>
+                <TextBox x:Name="MessageBox" Width="500" Margin="0,0,10,0"/>
+                <Button Content="Отправить" Click="SendButton_Click"/>
             </StackPanel>
         </Grid>
     </Grid>

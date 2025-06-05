@@ -59,6 +59,22 @@
   },
   {
     "ContainingType": "QuickChat.API.Controllers.ChatController",
+    "Method": "CreateChat",
+    "RelativePath": "api/chats/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "QuickChat.API.DTO.CreateChatRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuickChat.API.Controllers.ChatController",
     "Method": "JoinChat",
     "RelativePath": "api/chats/join",
     "HttpMethod": "POST",
@@ -66,14 +82,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "chatId",
-        "Type": "System.Guid",
-        "IsRequired": false
-      },
-      {
-        "Name": "userId",
-        "Type": "System.Guid",
-        "IsRequired": false
+        "Name": "request",
+        "Type": "QuickChat.API.DTO.JoinChatRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -99,6 +110,11 @@
       {
         "Name": "chatId",
         "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "username",
+        "Type": "System.String",
         "IsRequired": false
       },
       {

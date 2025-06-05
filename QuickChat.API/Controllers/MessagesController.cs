@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using QuickChat.API.Data;
 using QuickChat.API.Models;
 
@@ -8,11 +9,12 @@ namespace QuickChat.API.Controllers
     [Route("api/messages")]
     public class MessagesController : ControllerBase
     {
+        private readonly ChatDbContext _db;
         private readonly ChatDbContext _context;
 
-        public MessagesController(ChatDbContext context)
+        public MessagesController(ChatDbContext db)
         {
-            _context = context;
+            _db = db;
         }
 
         [HttpGet]
@@ -23,32 +25,33 @@ namespace QuickChat.API.Controllers
         }
 
         [HttpPost]
-        public IActionResult SendMessage([FromQuery] Guid chatId, [FromQuery] string text)
+        [HttpPost]
+        public async Task<IActionResult> SendMessage(Guid chatId, string username, string text)
         {
-            // 1. Проверка существования чата
-            var chatExists = _context.Chats.Any(c => c.Id == chatId);
+            // Найти пользователя по логину
+            var sender = await _db.Users.FirstOrDefaultAsync(u => u.Username == username);
+            if (sender == null)
+                return BadRequest("Пользователь не найден");
+
+            // Проверка, что чат существует
+            var chatExists = await _db.Chats.AnyAsync(c => c.Id == chatId);
             if (!chatExists)
-                return BadRequest("❌ Чат с таким ID не существует");
+                return BadRequest("Чат не найден");
 
-            // 2. Проверка текста
-            if (string.IsNullOrWhiteSpace(text))
-                return BadRequest("❌ Сообщение не может быть пустым");
-
-            // 3. Создание сообщения
+            // Создаём сообщение
             var message = new Message
             {
-                Id = Guid.NewGuid(),
                 ChatId = chatId,
-                SenderId = Guid.NewGuid(), // ❗ временно подставной пользователь
+                SenderId = sender.Id,
+                SenderName = sender.Name,
                 Text = text,
-                SentAt = DateTime.UtcNow,
-                IsRead = false
+                SentAt = DateTime.UtcNow
             };
 
-            _context.Messages.Add(message);
-            _context.SaveChanges();
+            _db.Messages.Add(message);
+            await _db.SaveChangesAsync();
 
-            return Ok("✅ Сообщение успешно отправлено");
+            return Ok("Сообщение отправлено");
         }
     }
 }

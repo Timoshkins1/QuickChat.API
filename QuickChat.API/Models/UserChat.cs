@@ -1,13 +1,14 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using QuickChat.API.Models;
+﻿// Models/UserChat.cs
+using System;
 
-public class UserChat
+namespace QuickChat.API.Models
 {
-    [ForeignKey(nameof(User))]
-    public Guid UserId { get; set; }
-    public User User { get; set; }
+    public class UserChat
+    {
+        public Guid UserId { get; set; }
+        public Guid ChatId { get; set; }
 
-    [ForeignKey(nameof(Chat))]
-    public Guid ChatId { get; set; }
-    public Chat Chat { get; set; }
+        public User User { get; set; }
+        public Chat Chat { get; set; }
+    }
 }
