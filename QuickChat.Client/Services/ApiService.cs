@@ -1,37 +1,35 @@
-﻿using System.Net.Http;
-using System.Net.Http.Headers;
+﻿using System;
+using System.Collections.Generic;
+using System.Net.Http;
 using System.Net.Http.Json;
+using System.Threading.Tasks;
 
 namespace QuickChat.Client.Services
 {
     public class ApiService
     {
-        private readonly HttpClient _httpClient;
+        private readonly HttpClient _client;
 
         public ApiService()
         {
-            _httpClient = new HttpClient
-            {
-                BaseAddress = new Uri("https://localhost:5001") // Замените на ваш адрес API
-            };
+            _client = new HttpClient();
+            _client.BaseAddress = new Uri("http://localhost:5111");
         }
 
-        public async Task<string> Login(string username, string password)
+        public async Task CreateChatAsync(string name)
         {
-            var response = await _httpClient.PostAsJsonAsync("/api/auth/login", new
-            {
-                Username = username,
-                Password = password
-            });
-
-            response.EnsureSuccessStatusCode();
-            return await response.Content.ReadAsStringAsync();
+            await _client.PostAsync($"/api/chats?name={Uri.EscapeDataString(name)}", null);
         }
 
-        public void SetAuthToken(string token)
+        public async Task<List<string>> GetChatsAsync()
         {
-            _httpClient.DefaultRequestHeaders.Authorization =
-                new AuthenticationHeaderValue("Bearer", token);
+            var response = await _client.GetAsync("/api/chats");
+            return await response.Content.ReadFromJsonAsync<List<string>>() ?? new List<string>();
+        }
+
+        public async Task SendMessageToApiAsync(Guid chatId, string text)
+        {
+            await _client.PostAsync($"/api/messages?chatId={chatId}&text={Uri.EscapeDataString(text)}", null);
         }
     }
 }

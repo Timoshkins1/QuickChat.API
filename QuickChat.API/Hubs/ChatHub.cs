@@ -1,16 +1,26 @@
 ﻿using Microsoft.AspNetCore.SignalR;
-using System.Text.RegularExpressions;
+using System;
+using System.Threading.Tasks;
 
 public class ChatHub : Hub
 {
-    public async Task JoinChat(Guid chatId)
-    {
-        await Groups.AddToGroupAsync(Context.ConnectionId, chatId.ToString());
-    }
-
     public async Task SendMessage(Guid chatId, string message)
     {
-        await Clients.Group(chatId.ToString())
-            .SendAsync("ReceiveMessage", Context.User.Identity.Name, message);
+        Console.WriteLine($"💬 Получено сообщение в чат {chatId}: {message}");
+
+        // Рассылаем сообщение всем
+        await Clients.All.SendAsync("ReceiveMessage", chatId.ToString(), message);
+    }
+
+    public override async Task OnConnectedAsync()
+    {
+        Console.WriteLine($"✅ Подключился клиент: {Context.ConnectionId}");
+        await base.OnConnectedAsync();
+    }
+
+    public override async Task OnDisconnectedAsync(Exception? exception)
+    {
+        Console.WriteLine($"❌ Отключился клиент: {Context.ConnectionId}");
+        await base.OnDisconnectedAsync(exception);
     }
 }

@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.SignalR.Client;
+using System;
+using System.Threading.Tasks;
 
 namespace QuickChat.Client.Services
 {
@@ -8,25 +10,34 @@ namespace QuickChat.Client.Services
 
         public event Action<string, string> MessageReceived;
 
-        public async Task Connect(string token)
+        public async Task Connect()
         {
-            _hubConnection = new HubConnectionBuilder()
-                .WithUrl("https://localhost:5001/chatHub", options =>
-                {
-                    options.AccessTokenProvider = () => Task.FromResult(token);
-                })
-                .Build();
-
-            _hubConnection.On<string, string>("ReceiveMessage", (user, message) =>
+            try
             {
-                MessageReceived?.Invoke(user, message);
-            });
+                Console.WriteLine("🔌 Подключение к SignalR...");
 
-            await _hubConnection.StartAsync();
+                _hubConnection = new HubConnectionBuilder()
+                    .WithUrl("http://localhost:5111/chatHub") // ← важно
+                    .Build();
+
+                _hubConnection.On<string, string>("ReceiveMessage", (chatId, message) =>
+                {
+                    Console.WriteLine($"📩 Получено сообщение от чата {chatId}: {message}");
+                    MessageReceived?.Invoke(chatId, message);
+                });
+
+                await _hubConnection.StartAsync();
+                Console.WriteLine("✅ SignalR подключен");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("❌ Ошибка подключения к SignalR: " + ex.Message);
+            }
         }
 
         public async Task SendMessage(Guid chatId, string message)
         {
+            Console.WriteLine($"➡️ Отправка сообщения в чат {chatId}: {message}");
             await _hubConnection.SendAsync("SendMessage", chatId, message);
         }
     }

@@ -1,20 +1,25 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
 
 [ApiController]
 [Route("api/chats")]
 public class ChatController : ControllerBase
 {
+    private static readonly List<string> ChatNames = new();
+
     [HttpGet]
     public IActionResult GetChats()
     {
-        // Возвращаем список чатов пользователя
-        return Ok(new List<Chat>());
+        Console.WriteLine("📥 Запрос: получить список чатов");
+        return Ok(ChatNames);
     }
 
     [HttpPost]
-    public IActionResult CreateChat(string name)
+    public IActionResult CreateChat([FromQuery] string name)
     {
-        // Создаём новый чат
+        Console.WriteLine($"🆕 Запрос: создать чат с именем '{name}'");
+        ChatNames.Add(name);
         return Ok("Чат создан!");
     }
 }

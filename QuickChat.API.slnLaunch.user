@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Новый профиль",
+    "Projects": [
+      {
+        "Path": "QuickChat.API\\QuickChat.API.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "QuickChat.Client\\QuickChat.Client.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
