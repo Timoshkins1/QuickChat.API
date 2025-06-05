@@ -1,0 +1,28 @@
+﻿<Window x:Class="QuickChat.Client.Views.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Регистрация" Height="300" Width="400"
+        WindowStartupLocation="CenterScreen"
+        Background="{StaticResource LightBrush}">
+
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="300">
+            <TextBlock Text="Регистрация" 
+                       Foreground="{StaticResource TextBrush}"
+                       FontSize="20"
+                       Margin="0,0,0,20"
+                       HorizontalAlignment="Center"/>
+
+            <TextBlock Text="Логин:" Foreground="{StaticResource TextBrush}" Margin="5"/>
+            <TextBox x:Name="UsernameBox" Margin="5"/>
+
+            <TextBlock Text="Пароль:" Foreground="{StaticResource TextBrush}" Margin="5"/>
+            <PasswordBox x:Name="PasswordBox" Margin="5"/>
+
+            <TextBlock Text="Имя (отображаемое):" Foreground="{StaticResource TextBrush}" Margin="5"/>
+            <TextBox x:Name="DisplayNameBox" Margin="5"/>
+
+            <Button Content="Зарегистрироваться" Margin="5,15,5,0" Click="Register_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

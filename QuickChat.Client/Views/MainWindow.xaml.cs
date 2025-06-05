@@ -11,29 +11,27 @@ namespace QuickChat.Client
 {
     public partial class MainWindow : Window
     {
+
         private readonly ChatService _chatService = new();
         private readonly ApiService _apiService = new();
-
-        public ObservableCollection<ChatItem> Chats { get; set; } = new();
         private readonly Dictionary<Guid, ObservableCollection<MessageItem>> _chatMessages = new();
+        public ObservableCollection<ChatItem> Chats { get; set; } = new();
         private Guid _currentChatId;
+        private string _username = "User1"; // ← заменить на логин при авторизации
 
         public MainWindow()
         {
             InitializeComponent();
-
             ChatsList.ItemsSource = Chats;
             Loaded += MainWindow_Loaded;
         }
 
         private async void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            await _chatService.Connect();
-
-            _chatService.MessageReceived += (chatId, message) =>
+            await _chatService.Connect("User1"); // ← имя пользователя
+            _chatService.MessageReceived += (chatId, message, sender) =>
             {
                 var id = Guid.Parse(chatId);
-
                 if (!_chatMessages.ContainsKey(id))
                     _chatMessages[id] = new ObservableCollection<MessageItem>();
 
@@ -42,7 +40,7 @@ namespace QuickChat.Client
                     _chatMessages[id].Add(new MessageItem
                     {
                         Text = message,
-                        IsMine = false
+                        IsMine = sender == _username
                     });
 
                     if (id == _currentChatId)
@@ -50,13 +48,13 @@ namespace QuickChat.Client
                 });
             };
 
-            // Загрузить чаты с API
             var serverChats = await _apiService.GetChatsAsync();
-            foreach (var name in serverChats)
+
+            foreach (var chat in serverChats)
             {
-                var id = Guid.NewGuid(); // ← можно позже заменить на ID с сервера
-                Chats.Add(new ChatItem { Name = name, Id = id });
+                Chats.Add(chat); // ✅ chat уже содержит Id и Name
             }
+
 
             if (Chats.Any())
             {
@@ -73,17 +71,6 @@ namespace QuickChat.Client
             {
                 await _chatService.SendMessage(_currentChatId, text);
                 await _apiService.SendMessageToApiAsync(_currentChatId, text);
-
-                if (!_chatMessages.ContainsKey(_currentChatId))
-                    _chatMessages[_currentChatId] = new ObservableCollection<MessageItem>();
-
-                _chatMessages[_currentChatId].Add(new MessageItem
-                {
-                    Text = text,
-                    IsMine = true
-                });
-
-                ShowMessagesForCurrentChat();
                 MessageBox.Clear();
             }
         }

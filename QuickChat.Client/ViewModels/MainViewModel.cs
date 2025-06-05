@@ -16,7 +16,7 @@ namespace QuickChat.Client.ViewModels
             await api.CreateChatAsync("Новый чат");
 
             var chatService = new ChatService();
-            await chatService.Connect(); // без токена
+            await chatService.Connect("User1"); // без токена
             await chatService.SendMessage(Guid.NewGuid(), "Привет из клиента!");
         }
 

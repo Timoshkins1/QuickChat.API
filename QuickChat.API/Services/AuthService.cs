@@ -2,6 +2,8 @@
 using System.Security.Claims;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
+using QuickChat.API.Data;
+using QuickChat.API.Models;
 namespace QuickChat.API.Services
 {
     public class AuthService

@@ -1,9 +1,15 @@
-﻿
-public class Chat
+﻿using System;
+using System.Collections.Generic;
+
+namespace QuickChat.API.Models
 {
-    public Guid Id { get; set; }
-    public string Name { get; set; }
-    public bool IsGroup { get; set; }
-    public List<UserChat> UserChats { get; set; } = new();
-    public List<Message> Messages { get; set; } = new();
+    public class Chat
+    {
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+        public bool IsGroup { get; set; }
+
+        public ICollection<UserChat> UserChats { get; set; }
+        public ICollection<Message> Messages { get; set; }
+    }
 }

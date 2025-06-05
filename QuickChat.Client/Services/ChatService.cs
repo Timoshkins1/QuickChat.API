@@ -7,38 +7,29 @@ namespace QuickChat.Client.Services
     public class ChatService
     {
         private HubConnection _hubConnection;
+        private string _username;
 
-        public event Action<string, string> MessageReceived;
+        public event Action<string, string, string> MessageReceived;
 
-        public async Task Connect()
+        public async Task Connect(string username)
         {
-            try
+            _username = username;
+
+            _hubConnection = new HubConnectionBuilder()
+                .WithUrl("http://localhost:5111/chatHub")
+                .Build();
+
+            _hubConnection.On<string, string, string>("ReceiveMessage", (chatId, message, sender) =>
             {
-                Console.WriteLine("🔌 Подключение к SignalR...");
+                MessageReceived?.Invoke(chatId, message, sender);
+            });
 
-                _hubConnection = new HubConnectionBuilder()
-                    .WithUrl("http://localhost:5111/chatHub") // ← важно
-                    .Build();
-
-                _hubConnection.On<string, string>("ReceiveMessage", (chatId, message) =>
-                {
-                    Console.WriteLine($"📩 Получено сообщение от чата {chatId}: {message}");
-                    MessageReceived?.Invoke(chatId, message);
-                });
-
-                await _hubConnection.StartAsync();
-                Console.WriteLine("✅ SignalR подключен");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("❌ Ошибка подключения к SignalR: " + ex.Message);
-            }
+            await _hubConnection.StartAsync();
         }
 
         public async Task SendMessage(Guid chatId, string message)
         {
-            Console.WriteLine($"➡️ Отправка сообщения в чат {chatId}: {message}");
-            await _hubConnection.SendAsync("SendMessage", chatId, message);
+            await _hubConnection.SendAsync("SendMessage", chatId, message, _username);
         }
     }
 }

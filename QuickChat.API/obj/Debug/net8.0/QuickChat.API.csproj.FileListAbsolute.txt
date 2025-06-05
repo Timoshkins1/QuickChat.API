@@ -196,6 +196,7 @@ C:\Users\user\Source\Repos\delivery\QuickChat.API\QuickChat.API\bin\Debug\net8.0
 C:\Users\user\Source\Repos\delivery\QuickChat.API\QuickChat.API\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\user\Source\Repos\delivery\QuickChat.API\QuickChat.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\user\Source\Repos\delivery\QuickChat.API\QuickChat.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\user\Source\Repos\delivery\QuickChat.API\QuickChat.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\user\Source\Repos\delivery\QuickChat.API\QuickChat.API\bin\Debug\net8.0\System.CodeDom.dll
 C:\Users\user\Source\Repos\delivery\QuickChat.API\QuickChat.API\bin\Debug\net8.0\System.Composition.AttributedModel.dll
 C:\Users\user\Source\Repos\delivery\QuickChat.API\QuickChat.API\bin\Debug\net8.0\System.Composition.Convention.dll
@@ -302,4 +303,4 @@ C:\Users\user\Source\Repos\delivery\QuickChat.API\QuickChat.API\obj\Debug\net8.0
 C:\Users\user\Source\Repos\delivery\QuickChat.API\QuickChat.API\obj\Debug\net8.0\QuickChat.API.pdb
 C:\Users\user\Source\Repos\delivery\QuickChat.API\QuickChat.API\obj\Debug\net8.0\QuickChat.API.genruntimeconfig.cache
 C:\Users\user\Source\Repos\delivery\QuickChat.API\QuickChat.API\obj\Debug\net8.0\ref\QuickChat.API.dll
-C:\Users\user\Source\Repos\delivery\QuickChat.API\QuickChat.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\user\Source\Repos\delivery\QuickChat.API\QuickChat.API\bin\Debug\net8.0\libman.json

@@ -9,9 +9,7 @@ namespace QuickChat.Client.Converters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return (bool)value
-                ? HorizontalAlignment.Right
-                : HorizontalAlignment.Left;
+            return (bool)value ? HorizontalAlignment.Right : HorizontalAlignment.Left;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

@@ -1,11 +1,21 @@
-﻿
-public class User
+﻿using System;
+using System.Collections.Generic;
+
+namespace QuickChat.API.Models
 {
-    public Guid Id { get; set; }
-    public string Username { get; set; }
-    public string PasswordHash { get; set; }
-    public string AvatarUrl { get; set; }
-    public DateTime LastOnline { get; set; }
-    public bool IsOnline { get; set; }
-    public List<UserChat> UserChats { get; set; } = new();
+    public class User
+    {
+        public Guid Id { get; set; }
+
+        public string Username { get; set; }      // Логин
+        public string PasswordHash { get; set; }  // Хеш пароля
+        public string Name { get; set; }          // Отображаемое имя (DisplayName)
+
+        public bool IsOnline { get; set; }
+        public DateTime LastOnline { get; set; }
+
+        // Навигационные свойства
+        public List<UserChat> UserChats { get; set; }
+        public List<Message> Messages { get; set; }
+    }
 }

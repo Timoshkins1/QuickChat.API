@@ -1,4 +1,7 @@
 ﻿
+using QuickChat.API.Data;
+using QuickChat.API.Models;
+
 namespace QuickChat.API.Services
 {
     public class ChatService

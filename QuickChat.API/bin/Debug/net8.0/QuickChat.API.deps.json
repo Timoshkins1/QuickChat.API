@@ -11,6 +11,7 @@
           "BCrypt.Net-Next": "4.0.3",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.0",
           "Microsoft.EntityFrameworkCore.Design": "9.0.5",
+          "Microsoft.EntityFrameworkCore.Tools": "9.0.5",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.4",
           "Swashbuckle.AspNetCore.SwaggerGen": "8.1.2",
           "Swashbuckle.AspNetCore.SwaggerUI": "8.1.4"
@@ -400,6 +401,11 @@
             "assemblyVersion": "9.0.5.0",
             "fileVersion": "9.0.525.21604"
           }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/9.0.5": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "9.0.5"
         }
       },
       "Microsoft.Extensions.Caching.Abstractions/9.0.5": {
@@ -911,6 +917,13 @@
       "sha512": "sha512-6eErbrZFd9yNnncemtDdmHZ3KC792OQCIYITuMsjK2oh4CLzlYo8mzNsozgUzQ+utHnne11/3eV8zMWbYF5Puw==",
       "path": "microsoft.entityframeworkcore.relational/9.0.5",
       "hashPath": "microsoft.entityframeworkcore.relational.9.0.5.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Tools/9.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZXWaG/tNZpgJUX8rFVEsgskuFzCvhQnQu8IkEEn4kAepYWpnUZa08vME289OYZ+bYfucH/uSVQi+rh6mOZtfVA==",
+      "path": "microsoft.entityframeworkcore.tools/9.0.5",
+      "hashPath": "microsoft.entityframeworkcore.tools.9.0.5.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/9.0.5": {
       "type": "package",

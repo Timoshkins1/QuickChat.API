@@ -3,6 +3,6 @@
     public class MessageItem
     {
         public string Text { get; set; }
-        public bool IsMine { get; set; } // ← новое
+        public bool IsMine { get; set; }
     }
 }

@@ -1,23 +1,54 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using QuickChat.API.Data;
+using QuickChat.API.Models;
 
-[ApiController]
-[Route("api/messages")]
-public class MessagesController : ControllerBase
+namespace QuickChat.API.Controllers
 {
-    private static readonly List<(Guid ChatId, string Text)> Messages = new();
-
-    [HttpPost]
-    public IActionResult SendMessage(Guid chatId, string text)
+    [ApiController]
+    [Route("api/messages")]
+    public class MessagesController : ControllerBase
     {
-        Console.WriteLine($"📥 [API] Получено сообщение в чат {chatId}: {text}");
-        Messages.Add((chatId, text));
-        return Ok();
-    }
+        private readonly ChatDbContext _context;
 
-    [HttpGet]
-    public IActionResult GetMessages(Guid chatId)
-    {
-        var result = Messages.FindAll(m => m.ChatId == chatId);
-        return Ok(result);
+        public MessagesController(ChatDbContext context)
+        {
+            _context = context;
+        }
+
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            var messages = _context.Messages.ToList();
+            return Ok(messages);
+        }
+
+        [HttpPost]
+        public IActionResult SendMessage([FromQuery] Guid chatId, [FromQuery] string text)
+        {
+            // 1. Проверка существования чата
+            var chatExists = _context.Chats.Any(c => c.Id == chatId);
+            if (!chatExists)
+                return BadRequest("❌ Чат с таким ID не существует");
+
+            // 2. Проверка текста
+            if (string.IsNullOrWhiteSpace(text))
+                return BadRequest("❌ Сообщение не может быть пустым");
+
+            // 3. Создание сообщения
+            var message = new Message
+            {
+                Id = Guid.NewGuid(),
+                ChatId = chatId,
+                SenderId = Guid.NewGuid(), // ❗ временно подставной пользователь
+                Text = text,
+                SentAt = DateTime.UtcNow,
+                IsRead = false
+            };
+
+            _context.Messages.Add(message);
+            _context.SaveChanges();
+
+            return Ok("✅ Сообщение успешно отправлено");
+        }
     }
 }

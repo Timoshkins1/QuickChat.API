@@ -31,6 +31,12 @@
                     Margin="5,20,5,5"
                     Height="30"
                     Click="LoginButton_Click"/>
+
+            <Button x:Name="RegisterButton" 
+                    Content="Регистрация" 
+                    Margin="5,5,5,0"
+                    Height="30"
+                    Click="RegisterButton_Click"/>
         </StackPanel>
     </Grid>
 </Window>
