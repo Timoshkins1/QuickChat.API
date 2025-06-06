@@ -12,6 +12,7 @@
         <!-- Конвертеры -->
         <converters:MessageAlignConverter x:Key="MessageAlignConverter"/>
         <converters:MessageColorConverter x:Key="MessageColorConverter"/>
+        <converters:InvertBoolToVisibilityConverter x:Key="InvertBoolToVisibilityConverter"/>
     </Application.Resources>
 
 </Application>
