@@ -12,10 +12,8 @@ namespace QuickChat.Client.Services
 
         public ApiService()
         {
-            _httpClient = new HttpClient
-            {
-                BaseAddress = new Uri("http://localhost:5111") // ⚠️ Убедись, что порт совпадает с твоим API
-            };
+            _httpClient = new HttpClient();
+            _httpClient.BaseAddress = new Uri("http://localhost:5111");
         }
 
         /// <summary>
