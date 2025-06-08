@@ -2,6 +2,7 @@
 using QuickChat.API.Data;
 using QuickChat.API.Models;
 using Microsoft.EntityFrameworkCore;
+using QuickChat.API.DTO;
 
 namespace QuickChat.API.Controllers
 {
@@ -18,21 +19,17 @@ namespace QuickChat.API.Controllers
 
         // 🔹 Получить все чаты конкретного пользователя
         [HttpGet("{userId}")]
+        [HttpGet("user/{userId}")]
         public IActionResult GetUserChats(Guid userId)
         {
-            var chatIds = _context.UserChats
+            var chats = _context.UserChats
                 .Where(uc => uc.UserId == userId)
-                .Select(uc => uc.ChatId)
-                .ToList();
-
-            var chats = _context.Chats
-                .Where(c => chatIds.Contains(c.Id))
-                .Select(c => new
+                .Select(uc => new
                 {
-                    c.Id,
-                    OtherUser = _context.UserChats
-                        .Where(uc => uc.ChatId == c.Id && uc.UserId != userId)
-                        .Select(uc => uc.User.Name)
+                    uc.Chat.Id,
+                    OtherUser = uc.Chat.UserChats
+                        .Where(ouc => ouc.UserId != userId)
+                        .Select(ouc => ouc.User.Username)
                         .FirstOrDefault()
                 })
                 .ToList();
@@ -40,37 +37,44 @@ namespace QuickChat.API.Controllers
             return Ok(chats);
         }
 
+
         // 🔹 Создать приватный чат между двумя пользователями (если его нет)
-        [HttpPost("private")]
-        public IActionResult CreatePrivateChat([FromQuery] Guid user1Id, [FromQuery] Guid user2Id)
+        [HttpPost("create-private")]
+        public IActionResult CreatePrivateChat([FromBody] CreatePrivateChatRequest request)
         {
-            var existingChatId = _context.UserChats
-                .GroupBy(uc => uc.ChatId)
-                .Where(g => g.Count() == 2 &&
-                            g.Any(uc => uc.UserId == user1Id) &&
-                            g.Any(uc => uc.UserId == user2Id))
-                .Select(g => g.Key)
+            var user1 = _context.Users.FirstOrDefault(u => u.Id == request.InitiatorId);
+            var user2 = _context.Users.FirstOrDefault(u => u.Id == request.RecipientId);
+
+            if (user1 == null || user2 == null)
+                return BadRequest("Один из пользователей не найден");
+
+            // Проверка: есть ли уже такой чат
+            var existingChat = _context.Chats
+                .Where(c => c.UserChats.Count == 2 &&
+                            c.UserChats.Any(uc => uc.UserId == request.InitiatorId) &&
+                            c.UserChats.Any(uc => uc.UserId == request.RecipientId))
                 .FirstOrDefault();
 
-            if (existingChatId != Guid.Empty)
-            {
-                var existingChat = _context.Chats.FirstOrDefault(c => c.Id == existingChatId);
-                return Ok(existingChat);
-            }
+            if (existingChat != null)
+                return Ok(existingChat.Id); // Уже существует
 
+            // Создаём новый чат
             var chat = new Chat
             {
                 Id = Guid.NewGuid(),
-                IsGroup = false
+                Messages = new List<Message>(),
+                UserChats = new List<UserChat>
+        {
+            new UserChat { UserId = request.InitiatorId },
+            new UserChat { UserId = request.RecipientId }
+        }
             };
 
             _context.Chats.Add(chat);
-            _context.UserChats.Add(new UserChat { ChatId = chat.Id, UserId = user1Id });
-            _context.UserChats.Add(new UserChat { ChatId = chat.Id, UserId = user2Id });
-
             _context.SaveChanges();
 
-            return Ok(chat);
+            return Ok(chat.Id);
         }
+
     }
 }

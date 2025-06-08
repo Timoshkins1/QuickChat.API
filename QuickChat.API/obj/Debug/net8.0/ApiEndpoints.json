@@ -50,20 +50,31 @@
   {
     "ContainingType": "QuickChat.API.Controllers.ChatController",
     "Method": "CreatePrivateChat",
-    "RelativePath": "api/chats/private",
+    "RelativePath": "api/chats/create-private",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "user1Id",
-        "Type": "System.Guid",
-        "IsRequired": false
-      },
+        "Name": "request",
+        "Type": "QuickChat.API.DTO.CreatePrivateChatRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuickChat.API.Controllers.ChatController",
+    "Method": "GetUserChats",
+    "RelativePath": "api/chats/user/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
       {
-        "Name": "user2Id",
+        "Name": "userId",
         "Type": "System.Guid",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

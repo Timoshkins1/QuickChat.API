@@ -1,6 +1,6 @@
-﻿using System;
+﻿using QuickChat.Client.Services;
+using System;
 using System.Threading.Tasks;
-using QuickChat.Client.Services;
 
 namespace QuickChat.Client.ViewModels
 {
@@ -20,7 +20,7 @@ namespace QuickChat.Client.ViewModels
             _apiService = new ApiService();
             _chatService = new ChatService();
 
-            _ = InitializeAsync(); // запускаем асинхронную инициализацию
+            _ = InitializeAsync(); // запускаем подключение к SignalR
         }
 
         private async Task InitializeAsync()
@@ -28,15 +28,10 @@ namespace QuickChat.Client.ViewModels
             await _chatService.Connect(_username);
         }
 
-        public async Task CreateChatAndSendTestMessage(Guid targetUserId, string targetUsername)
+        // ты можешь вызвать этот метод из UI, если хочешь использовать VM:
+        public async Task<Guid?> CreateChatWith(Guid targetUserId)
         {
-            var chat = await _apiService.CreatePrivateChatAsync(_userId, targetUserId);
-
-            if (chat != null)
-            {
-                await _chatService.SendMessage(chat.Id, $"Привет, {targetUsername}!");
-                await _apiService.SendMessageToApiAsync(chat.Id, $"Привет, {targetUsername}!", _username);
-            }
+            return await _apiService.CreatePrivateChatAsync(_userId, targetUserId);
         }
     }
 }

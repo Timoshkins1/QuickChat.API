@@ -3,16 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|c:\\users\\user\\source\\repos\\delivery\\quickchat.api\\quickchat.client\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|c:\\users\\user\\source\\repos\\delivery\\quickchat.api\\quickchat.client\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|c:\\users\\user\\source\\repos\\delivery\\quickchat.api\\quickchat.client\\models\\createprivatechatrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\models\\createprivatechatrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|c:\\users\\user\\source\\repos\\delivery\\quickchat.api\\quickchat.client\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BAA454C3-2027-467F-A97B-3C4B08023082}|QuickChat.API\\QuickChat.API.csproj|c:\\users\\user\\source\\repos\\delivery\\quickchat.api\\quickchat.api\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BAA454C3-2027-467F-A97B-3C4B08023082}|QuickChat.API\\QuickChat.API.csproj|solutionrelative:quickchat.api\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BAA454C3-2027-467F-A97B-3C4B08023082}|QuickChat.API\\QuickChat.API.csproj|c:\\users\\user\\source\\repos\\delivery\\quickchat.api\\quickchat.api\\dto\\createprivatechatrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BAA454C3-2027-467F-A97B-3C4B08023082}|QuickChat.API\\QuickChat.API.csproj|solutionrelative:quickchat.api\\dto\\createprivatechatrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|c:\\users\\user\\source\\repos\\delivery\\quickchat.api\\quickchat.client\\models\\chatitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\models\\chatitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|c:\\users\\user\\source\\repos\\delivery\\quickchat.api\\quickchat.client\\views\\selectuserwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\views\\selectuserwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BAA454C3-2027-467F-A97B-3C4B08023082}|QuickChat.API\\QuickChat.API.csproj|c:\\users\\user\\source\\repos\\delivery\\quickchat.api\\quickchat.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BAA454C3-2027-467F-A97B-3C4B08023082}|QuickChat.API\\QuickChat.API.csproj|solutionrelative:quickchat.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|c:\\users\\user\\source\\repos\\delivery\\quickchat.api\\quickchat.client\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|c:\\users\\user\\source\\repos\\delivery\\quickchat.api\\quickchat.client\\dto\\authrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,10 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|c:\\users\\user\\source\\repos\\delivery\\quickchat.api\\quickchat.client\\models\\messageitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\models\\messageitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|c:\\users\\user\\source\\repos\\delivery\\quickchat.api\\quickchat.client\\models\\chatitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\models\\chatitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|c:\\users\\user\\source\\repos\\delivery\\quickchat.api\\quickchat.client\\views\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -59,32 +79,16 @@
       "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|c:\\users\\user\\source\\repos\\delivery\\quickchat.api\\quickchat.client\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|c:\\users\\user\\source\\repos\\delivery\\quickchat.api\\quickchat.client\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|c:\\users\\user\\source\\repos\\delivery\\quickchat.api\\quickchat.client\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|c:\\users\\user\\source\\repos\\delivery\\quickchat.api\\quickchat.client\\views\\selectuserwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\views\\selectuserwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.API\\Migrations\\20250608203728_InitialPrivateChat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:QuickChat.API\\Migrations\\20250608203728_InitialPrivateChat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BAA454C3-2027-467F-A97B-3C4B08023082}|QuickChat.API\\QuickChat.API.csproj|c:\\users\\user\\source\\repos\\delivery\\quickchat.api\\quickchat.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BAA454C3-2027-467F-A97B-3C4B08023082}|QuickChat.API\\QuickChat.API.csproj|solutionrelative:quickchat.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BAA454C3-2027-467F-A97B-3C4B08023082}|QuickChat.API\\QuickChat.API.csproj|c:\\users\\user\\source\\repos\\delivery\\quickchat.api\\quickchat.api\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BAA454C3-2027-467F-A97B-3C4B08023082}|QuickChat.API\\QuickChat.API.csproj|solutionrelative:quickchat.api\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BAA454C3-2027-467F-A97B-3C4B08023082}|QuickChat.API\\QuickChat.API.csproj|c:\\users\\user\\source\\repos\\delivery\\quickchat.api\\quickchat.api\\services\\chatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -160,6 +164,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\obj\\Debug\\net8.0-windows\\App.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:QuickChat.Client\\obj\\Debug\\net8.0-windows\\App.g.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BAA454C3-2027-467F-A97B-3C4B08023082}|QuickChat.API\\QuickChat.API.csproj|c:\\users\\user\\source\\repos\\delivery\\quickchat.api\\quickchat.api\\migrations\\20250608203728_initialprivatechat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BAA454C3-2027-467F-A97B-3C4B08023082}|QuickChat.API\\QuickChat.API.csproj|solutionrelative:quickchat.api\\migrations\\20250608203728_initialprivatechat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -169,47 +177,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.API\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "QuickChat.API\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.API\\Controllers\\UserController.cs*",
-              "RelativeToolTip": "QuickChat.API\\Controllers\\UserController.cs*",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAowCIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T21:14:22.891Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ApiService.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\Services\\ApiService.cs",
-              "RelativeDocumentMoniker": "QuickChat.Client\\Services\\ApiService.cs",
-              "ToolTip": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\Services\\ApiService.cs",
-              "RelativeToolTip": "QuickChat.Client\\Services\\ApiService.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAEwBkAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T07:56:58.636Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Chat.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.API\\Models\\Chat.cs",
-              "RelativeDocumentMoniker": "QuickChat.API\\Models\\Chat.cs",
-              "ToolTip": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.API\\Models\\Chat.cs",
-              "RelativeToolTip": "QuickChat.API\\Models\\Chat.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T07:46:40.368Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 6,
@@ -226,58 +195,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "AuthRequest.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\DTO\\AuthRequest.cs",
-              "RelativeDocumentMoniker": "QuickChat.Client\\DTO\\AuthRequest.cs",
-              "ToolTip": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\DTO\\AuthRequest.cs",
-              "RelativeToolTip": "QuickChat.Client\\DTO\\AuthRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Title": "ApiService.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\Services\\ApiService.cs",
+              "RelativeDocumentMoniker": "QuickChat.Client\\Services\\ApiService.cs",
+              "ToolTip": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\Services\\ApiService.cs",
+              "RelativeToolTip": "QuickChat.Client\\Services\\ApiService.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAmwDwAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T21:45:50.417Z",
+              "WhenOpened": "2025-06-03T07:56:58.636Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LoginWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\Views\\LoginWindow.xaml.cs",
-              "RelativeDocumentMoniker": "QuickChat.Client\\Views\\LoginWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\Views\\LoginWindow.xaml.cs",
-              "RelativeToolTip": "QuickChat.Client\\Views\\LoginWindow.xaml.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAowCIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T06:46:15.495Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MessageItem.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\Models\\MessageItem.cs",
-              "RelativeDocumentMoniker": "QuickChat.Client\\Models\\MessageItem.cs",
-              "ToolTip": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\Models\\MessageItem.cs",
-              "RelativeToolTip": "QuickChat.Client\\Models\\MessageItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T19:40:13.786Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SelectUserWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\Views\\SelectUserWindow.xaml.cs",
-              "RelativeDocumentMoniker": "QuickChat.Client\\Views\\SelectUserWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\Views\\SelectUserWindow.xaml.cs*",
-              "RelativeToolTip": "QuickChat.Client\\Views\\SelectUserWindow.xaml.cs*",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAowDwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T20:42:01.479Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "RegisterRequest.cs",
               "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.API\\DTO\\RegisterRequest.cs",
               "RelativeDocumentMoniker": "QuickChat.API\\DTO\\RegisterRequest.cs",
@@ -285,12 +215,137 @@
               "RelativeToolTip": "QuickChat.API\\DTO\\RegisterRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T20:57:30.342Z",
+              "WhenOpened": "2025-06-08T20:57:30.342Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\ViewModels\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "QuickChat.Client\\ViewModels\\MainViewModel.cs",
+              "ToolTip": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\ViewModels\\MainViewModel.cs",
+              "RelativeToolTip": "QuickChat.Client\\ViewModels\\MainViewModel.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAYwCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T07:56:28.771Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\Views\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "QuickChat.Client\\Views\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\Views\\MainWindow.xaml.cs*",
+              "RelativeToolTip": "QuickChat.Client\\Views\\MainWindow.xaml.cs*",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAAwKIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T20:18:33.935Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CreatePrivateChatRequest.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.API\\DTO\\CreatePrivateChatRequest.cs",
+              "RelativeDocumentMoniker": "QuickChat.API\\DTO\\CreatePrivateChatRequest.cs",
+              "ToolTip": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.API\\DTO\\CreatePrivateChatRequest.cs",
+              "RelativeToolTip": "QuickChat.API\\DTO\\CreatePrivateChatRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T21:29:55.583Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CreatePrivateChatRequest.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\Models\\CreatePrivateChatRequest.cs",
+              "RelativeDocumentMoniker": "QuickChat.Client\\Models\\CreatePrivateChatRequest.cs",
+              "ToolTip": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\Models\\CreatePrivateChatRequest.cs",
+              "RelativeToolTip": "QuickChat.Client\\Models\\CreatePrivateChatRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T21:31:33.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.API\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "QuickChat.API\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.API\\Controllers\\UserController.cs",
+              "RelativeToolTip": "QuickChat.API\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAowCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T21:14:22.891Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SelectUserWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\Views\\SelectUserWindow.xaml.cs",
+              "RelativeDocumentMoniker": "QuickChat.Client\\Views\\SelectUserWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\Views\\SelectUserWindow.xaml.cs",
+              "RelativeToolTip": "QuickChat.Client\\Views\\SelectUserWindow.xaml.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T20:42:01.479Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "ChatController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.API\\Controllers\\ChatController.cs",
+              "RelativeDocumentMoniker": "QuickChat.API\\Controllers\\ChatController.cs",
+              "ToolTip": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.API\\Controllers\\ChatController.cs",
+              "RelativeToolTip": "QuickChat.API\\Controllers\\ChatController.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAuwCoAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T20:23:11.458Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MessageItem.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\Models\\MessageItem.cs",
+              "RelativeDocumentMoniker": "QuickChat.Client\\Models\\MessageItem.cs",
+              "ToolTip": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\Models\\MessageItem.cs",
+              "RelativeToolTip": "QuickChat.Client\\Models\\MessageItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T19:40:13.786Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LoginWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\Views\\LoginWindow.xaml.cs",
+              "RelativeDocumentMoniker": "QuickChat.Client\\Views\\LoginWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\Views\\LoginWindow.xaml.cs",
+              "RelativeToolTip": "QuickChat.Client\\Views\\LoginWindow.xaml.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAowCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T06:46:15.495Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AuthRequest.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\DTO\\AuthRequest.cs",
+              "RelativeDocumentMoniker": "QuickChat.Client\\DTO\\AuthRequest.cs",
+              "ToolTip": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\DTO\\AuthRequest.cs",
+              "RelativeToolTip": "QuickChat.Client\\DTO\\AuthRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T21:45:50.417Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "ChatResponse.cs",
               "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\Models\\ChatResponse.cs",
               "RelativeDocumentMoniker": "QuickChat.Client\\Models\\ChatResponse.cs",
@@ -298,12 +353,23 @@
               "RelativeToolTip": "QuickChat.Client\\Models\\ChatResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T22:42:05.425Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-05T22:42:05.425Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
+              "Title": "Chat.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.API\\Models\\Chat.cs",
+              "RelativeDocumentMoniker": "QuickChat.API\\Models\\Chat.cs",
+              "ToolTip": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.API\\Models\\Chat.cs",
+              "RelativeToolTip": "QuickChat.API\\Models\\Chat.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T07:46:40.368Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.API\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "QuickChat.API\\Controllers\\AuthController.cs",
@@ -311,12 +377,11 @@
               "RelativeToolTip": "QuickChat.API\\Controllers\\AuthController.cs",
               "ViewState": "AgIAACAAAAAAAAAAAAAowD4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T22:01:26.808Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-05T22:01:26.808Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "LoginViewModel.cs",
               "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\ViewModels\\LoginViewModel.cs",
               "RelativeDocumentMoniker": "QuickChat.Client\\ViewModels\\LoginViewModel.cs",
@@ -324,12 +389,11 @@
               "RelativeToolTip": "QuickChat.Client\\ViewModels\\LoginViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T07:56:18.132Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T07:56:18.132Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "AuthRequest.cs",
               "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.API\\DTO\\AuthRequest.cs",
               "RelativeDocumentMoniker": "QuickChat.API\\DTO\\AuthRequest.cs",
@@ -337,12 +401,11 @@
               "RelativeToolTip": "QuickChat.API\\DTO\\AuthRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T20:55:40.732Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-08T20:55:40.732Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.API\\Models\\User.cs",
               "RelativeDocumentMoniker": "QuickChat.API\\Models\\User.cs",
@@ -350,62 +413,33 @@
               "RelativeToolTip": "QuickChat.API\\Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T07:46:17.806Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T07:46:17.806Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\Views\\MainWindow.xaml",
               "RelativeDocumentMoniker": "QuickChat.Client\\Views\\MainWindow.xaml",
               "ToolTip": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\Views\\MainWindow.xaml",
               "RelativeToolTip": "QuickChat.Client\\Views\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-08T20:10:51.225Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-08T20:10:51.225Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\Views\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "QuickChat.Client\\Views\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\Views\\MainWindow.xaml.cs",
-              "RelativeToolTip": "QuickChat.Client\\Views\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAGQAAAAAAAAAAAAowIIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T20:18:33.935Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "MainViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\ViewModels\\MainViewModel.cs",
-              "RelativeDocumentMoniker": "QuickChat.Client\\ViewModels\\MainViewModel.cs",
-              "ToolTip": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\ViewModels\\MainViewModel.cs",
-              "RelativeToolTip": "QuickChat.Client\\ViewModels\\MainViewModel.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAowCoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T07:56:28.771Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "SelectUserWindow.xaml",
               "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\Views\\SelectUserWindow.xaml",
               "RelativeDocumentMoniker": "QuickChat.Client\\Views\\SelectUserWindow.xaml",
               "ToolTip": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\Views\\SelectUserWindow.xaml",
               "RelativeToolTip": "QuickChat.Client\\Views\\SelectUserWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-08T20:41:47.482Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-08T20:41:47.482Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 41,
               "Title": "20250608203728_InitialPrivateChat.cs",
               "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.API\\Migrations\\20250608203728_InitialPrivateChat.cs",
               "RelativeDocumentMoniker": "QuickChat.API\\Migrations\\20250608203728_InitialPrivateChat.cs",
@@ -413,25 +447,11 @@
               "RelativeToolTip": "QuickChat.API\\Migrations\\20250608203728_InitialPrivateChat.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T20:37:28.328Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-08T20:37:28.328Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "ChatController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.API\\Controllers\\ChatController.cs",
-              "RelativeDocumentMoniker": "QuickChat.API\\Controllers\\ChatController.cs",
-              "ToolTip": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.API\\Controllers\\ChatController.cs",
-              "RelativeToolTip": "QuickChat.API\\Controllers\\ChatController.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAcwEwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T20:23:11.458Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "ChatService.cs",
               "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.API\\Services\\ChatService.cs",
               "RelativeDocumentMoniker": "QuickChat.API\\Services\\ChatService.cs",
@@ -439,24 +459,22 @@
               "RelativeToolTip": "QuickChat.API\\Services\\ChatService.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T08:07:25.928Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T08:07:25.928Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "RegisterWindow.xaml",
               "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\Views\\RegisterWindow.xaml",
               "RelativeDocumentMoniker": "QuickChat.Client\\Views\\RegisterWindow.xaml",
               "ToolTip": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\Views\\RegisterWindow.xaml",
               "RelativeToolTip": "QuickChat.Client\\Views\\RegisterWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-08T20:18:57.39Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-08T20:18:57.39Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.API\\Program.cs",
               "RelativeDocumentMoniker": "QuickChat.API\\Program.cs",
@@ -464,24 +482,22 @@
               "RelativeToolTip": "QuickChat.API\\Program.cs",
               "ViewState": "AgIAADIAAAAAAAAAAAAcwEQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T07:40:37.038Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T07:40:37.038Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "LoginWindow.xaml",
               "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\Views\\LoginWindow.xaml",
               "RelativeDocumentMoniker": "QuickChat.Client\\Views\\LoginWindow.xaml",
               "ToolTip": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\Views\\LoginWindow.xaml",
               "RelativeToolTip": "QuickChat.Client\\Views\\LoginWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-07T06:50:31.774Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-07T06:50:31.774Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "RegisterWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\Views\\RegisterWindow.xaml.cs",
               "RelativeDocumentMoniker": "QuickChat.Client\\Views\\RegisterWindow.xaml.cs",
@@ -489,12 +505,11 @@
               "RelativeToolTip": "QuickChat.Client\\Views\\RegisterWindow.xaml.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAcwCMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T20:18:52.791Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-08T20:18:52.791Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "ChatService.cs",
               "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\Services\\ChatService.cs",
               "RelativeDocumentMoniker": "QuickChat.Client\\Services\\ChatService.cs",
@@ -502,12 +517,11 @@
               "RelativeToolTip": "QuickChat.Client\\Services\\ChatService.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAcwCMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T07:57:09.055Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T07:57:09.055Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "BoolToColorConverter.cs",
               "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\Converters\\BoolToColorConverter.cs",
               "RelativeDocumentMoniker": "QuickChat.Client\\Converters\\BoolToColorConverter.cs",
@@ -515,12 +529,11 @@
               "RelativeToolTip": "QuickChat.Client\\Converters\\BoolToColorConverter.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T19:54:11.978Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-05T19:54:11.978Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "BoolToAlignConverter.cs",
               "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\Converters\\BoolToAlignConverter.cs",
               "RelativeDocumentMoniker": "QuickChat.Client\\Converters\\BoolToAlignConverter.cs",
@@ -528,12 +541,11 @@
               "RelativeToolTip": "QuickChat.Client\\Converters\\BoolToAlignConverter.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T19:54:26.38Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-05T19:54:26.38Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.API\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "QuickChat.API\\Services\\AuthService.cs",
@@ -541,12 +553,11 @@
               "RelativeToolTip": "QuickChat.API\\Services\\AuthService.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAuwDwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T08:06:13.43Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T08:06:13.43Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "UserChat.cs",
               "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.API\\Models\\UserChat.cs",
               "RelativeDocumentMoniker": "QuickChat.API\\Models\\UserChat.cs",
@@ -554,12 +565,11 @@
               "RelativeToolTip": "QuickChat.API\\Models\\UserChat.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T07:46:51.363Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T07:46:51.363Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "Message.cs",
               "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.API\\Models\\Message.cs",
               "RelativeDocumentMoniker": "QuickChat.API\\Models\\Message.cs",
@@ -567,12 +577,11 @@
               "RelativeToolTip": "QuickChat.API\\Models\\Message.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T07:46:45.486Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T07:46:45.486Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "ChatHub.cs",
               "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.API\\Hubs\\ChatHub.cs",
               "RelativeDocumentMoniker": "QuickChat.API\\Hubs\\ChatHub.cs",
@@ -580,12 +589,11 @@
               "RelativeToolTip": "QuickChat.API\\Hubs\\ChatHub.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T07:42:11.152Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T07:42:11.152Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "MessagesController.cs",
               "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.API\\Controllers\\MessagesController.cs",
               "RelativeDocumentMoniker": "QuickChat.API\\Controllers\\MessagesController.cs",
@@ -593,12 +601,11 @@
               "RelativeToolTip": "QuickChat.API\\Controllers\\MessagesController.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAuwDkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T19:44:02.116Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-05T19:44:02.116Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "20250605225647_AddUserChatRelation.cs",
               "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.API\\Migrations\\20250605225647_AddUserChatRelation.cs",
               "RelativeDocumentMoniker": "QuickChat.API\\Migrations\\20250605225647_AddUserChatRelation.cs",
@@ -609,7 +616,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\App.xaml.cs",
               "RelativeDocumentMoniker": "QuickChat.Client\\App.xaml.cs",
@@ -617,12 +624,11 @@
               "RelativeToolTip": "QuickChat.Client\\App.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T06:01:58.741Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T06:01:58.741Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.API\\appsettings.json",
               "RelativeDocumentMoniker": "QuickChat.API\\appsettings.json",
@@ -630,12 +636,11 @@
               "RelativeToolTip": "QuickChat.API\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-03T05:42:00.786Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T05:42:00.786Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "QuickChat.API.csproj",
               "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.API\\QuickChat.API.csproj",
               "RelativeDocumentMoniker": "QuickChat.API\\QuickChat.API.csproj",
@@ -643,12 +648,11 @@
               "RelativeToolTip": "QuickChat.API\\QuickChat.API.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-05T21:12:37.381Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-05T21:12:37.381Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "QuickChat.Client.csproj",
               "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\QuickChat.Client.csproj",
               "RelativeDocumentMoniker": "QuickChat.Client\\QuickChat.Client.csproj",
@@ -656,12 +660,11 @@
               "RelativeToolTip": "QuickChat.Client\\QuickChat.Client.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-03T07:53:55.151Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T07:53:55.151Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "ResourcePart.cs",
               "DocumentMoniker": "C:\\Users\\Student\\AppData\\Local\\Temp\\.vsdbgsrc\\6b2dfb9d5e4949b718ee78fa9415cabf37518e9447a2764ba224d240518b710f\\ResourcePart.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Student\\AppData\\Local\\Temp\\.vsdbgsrc\\6b2dfb9d5e4949b718ee78fa9415cabf37518e9447a2764ba224d240518b710f\\ResourcePart.cs",
@@ -673,7 +676,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "App.g.cs",
               "DocumentMoniker": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\obj\\Debug\\net8.0-windows\\App.g.cs",
               "RelativeDocumentMoniker": "QuickChat.Client\\obj\\Debug\\net8.0-windows\\App.g.cs",
@@ -681,8 +684,7 @@
               "RelativeToolTip": "QuickChat.Client\\obj\\Debug\\net8.0-windows\\App.g.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T06:03:10.304Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T06:03:10.304Z"
             }
           ]
         }

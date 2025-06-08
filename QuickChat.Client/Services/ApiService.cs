@@ -56,16 +56,25 @@ namespace QuickChat.Client.Services
             return new List<ChatItem>();
         }
 
-        public async Task<ChatItem> CreatePrivateChatAsync(Guid user1Id, Guid user2Id)
+        public async Task<Guid?> CreatePrivateChatAsync(Guid initiatorId, Guid recipientId)
         {
-            var response = await _httpClient.PostAsync($"/api/chats/private?user1Id={user1Id}&user2Id={user2Id}", null);
+            var request = new CreatePrivateChatRequest
+            {
+                InitiatorId = initiatorId,
+                RecipientId = recipientId
+            };
+
+            var response = await _httpClient.PostAsJsonAsync("/api/chats/create-private", request);
+
             if (response.IsSuccessStatusCode)
             {
-                return await response.Content.ReadFromJsonAsync<ChatItem>();
+                var chatId = await response.Content.ReadFromJsonAsync<Guid>();
+                return chatId;
             }
 
             return null;
         }
+
 
         public async Task<bool> SendMessageToApiAsync(Guid chatId, string text, string username)
         {
