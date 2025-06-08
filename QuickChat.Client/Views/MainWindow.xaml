@@ -44,11 +44,9 @@
         <!-- Sidebar -->
         <Border Grid.Column="0" Background="{StaticResource SidebarBrush}" Padding="10">
             <StackPanel>
-                <Button Content="Создать чат" Click="CreateChat_Click"/>
-                <Button Content="Подключиться к чату" Click="JoinChat_Click"/>
-
+                <Button Content="Новый чат" Click="NewChat_Click"/>
                 <TextBlock Text="Ваши чаты" FontSize="16" FontWeight="Bold" Foreground="{StaticResource AccentBrush}" Margin="5,20,5,10"/>
-                <ListBox x:Name="ChatsList" DisplayMemberPath="Name" 
+                <ListBox x:Name="ChatsList" DisplayMemberPath="OtherUser" 
                          Background="Transparent"
                          Foreground="White"
                          BorderThickness="0"
@@ -76,7 +74,6 @@
                                 <Border Background="{Binding IsMine, Converter={StaticResource MessageColorConverter}}"
                                         CornerRadius="8"
                                         Padding="10"
-                                        Margin="0"
                                         MaxWidth="400">
                                     <TextBlock Text="{Binding Text}"
                                                Foreground="White"
@@ -90,7 +87,7 @@
 
             <!-- Input -->
             <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="10">
-                <TextBox x:Name="MessageBox" Width="600" Margin="0,0,10,0" Height="35" />
+                <TextBox x:Name="MessageInputBox" Width="600" Margin="0,0,10,0" Height="35" />
                 <Button Content="Отправить" Width="100" Click="SendButton_Click"/>
             </StackPanel>
         </Grid>

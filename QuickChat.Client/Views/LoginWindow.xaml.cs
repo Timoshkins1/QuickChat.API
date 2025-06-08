@@ -1,5 +1,5 @@
-﻿using System.Windows;
-using QuickChat.Client.Models;
+﻿using System;
+using System.Windows;
 using QuickChat.Client.Services;
 using QuickChat.Client.Views;
 
@@ -16,16 +16,14 @@ namespace QuickChat.Client
 
         private async void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            string username = UsernameBox.Text;
-            string password = PasswordBox.Password;
+            string username = UsernameBox.Text.Trim();
+            string password = PasswordBox.Password.Trim();
 
-            var token = await _apiService.LoginAsync(username, password);
+            var userIdString = await _apiService.LoginAsync(username, password);
 
-            if (token != null)
+            if (!string.IsNullOrEmpty(userIdString) && Guid.TryParse(userIdString, out var userId))
             {
-                MessageBox.Show("✅ Успешный вход!");
-                // Можно сохранить токен и открыть MainWindow
-                var main = new MainWindow();
+                var main = new MainWindow(userId, username);
                 main.Show();
                 this.Close();
             }
@@ -34,6 +32,7 @@ namespace QuickChat.Client
                 MessageBox.Show("❌ Ошибка входа. Проверьте логин и пароль.");
             }
         }
+
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {

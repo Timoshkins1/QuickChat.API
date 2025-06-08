@@ -17,9 +17,10 @@ namespace QuickChat.API.Services
         {
             var chat = new Chat
             {
-                Name = name,
-                IsGroup = isGroup
+                Id = Guid.NewGuid(),
+                IsGroup = true
             };
+
 
             _context.Chats.Add(chat);
 

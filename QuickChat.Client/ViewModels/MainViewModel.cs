@@ -1,24 +1,42 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using QuickChat.Client.Services;
-using System.Windows;
 
 namespace QuickChat.Client.ViewModels
 {
-    internal class MainViewModel
+    public class MainViewModel
     {
-        private async void Button_Click(object sender, RoutedEventArgs e)
-        {
-            var api = new ApiService();
-            await api.CreateChatAsync("Новый чат");
+        private readonly ApiService _apiService;
+        private readonly ChatService _chatService;
 
-            var chatService = new ChatService();
-            await chatService.Connect("User1"); // без токена
-            await chatService.SendMessage(Guid.NewGuid(), "Привет из клиента!");
+        private readonly Guid _userId;
+        private readonly string _username;
+
+        public MainViewModel(Guid userId, string username)
+        {
+            _userId = userId;
+            _username = username;
+
+            _apiService = new ApiService();
+            _chatService = new ChatService();
+
+            _ = InitializeAsync(); // запускаем асинхронную инициализацию
         }
 
+        private async Task InitializeAsync()
+        {
+            await _chatService.Connect(_username);
+        }
+
+        public async Task CreateChatAndSendTestMessage(Guid targetUserId, string targetUsername)
+        {
+            var chat = await _apiService.CreatePrivateChatAsync(_userId, targetUserId);
+
+            if (chat != null)
+            {
+                await _chatService.SendMessage(chat.Id, $"Привет, {targetUsername}!");
+                await _apiService.SendMessageToApiAsync(chat.Id, $"Привет, {targetUsername}!", _username);
+            }
+        }
     }
 }

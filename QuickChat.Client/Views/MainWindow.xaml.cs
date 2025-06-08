@@ -12,27 +12,36 @@ namespace QuickChat.Client
 {
     public partial class MainWindow : Window
     {
-
         private readonly ChatService _chatService = new();
         private readonly ApiService _apiService = new();
+
+        private readonly Guid _userId;
+        private readonly string _username;
+
+        private Guid _currentChatId;
         private readonly Dictionary<Guid, ObservableCollection<MessageItem>> _chatMessages = new();
         public ObservableCollection<ChatItem> Chats { get; set; } = new();
-        private Guid _currentChatId;
-        private string _username = "User1"; // ← заменить на логин при авторизации
 
-        public MainWindow()
+        public MainWindow(Guid userId, string username)
         {
             InitializeComponent();
+
+            _userId = userId;
+            _username = username;
+
             ChatsList.ItemsSource = Chats;
+
             Loaded += MainWindow_Loaded;
         }
 
         private async void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            await _chatService.Connect("User1"); // ← имя пользователя
+            await _chatService.Connect(_username);
+
             _chatService.MessageReceived += (chatId, message, sender) =>
             {
                 var id = Guid.Parse(chatId);
+
                 if (!_chatMessages.ContainsKey(id))
                     _chatMessages[id] = new ObservableCollection<MessageItem>();
 
@@ -41,6 +50,7 @@ namespace QuickChat.Client
                     _chatMessages[id].Add(new MessageItem
                     {
                         Text = message,
+                        Sender = sender,
                         IsMine = sender == _username
                     });
 
@@ -49,30 +59,36 @@ namespace QuickChat.Client
                 });
             };
 
-            var serverChats = await _apiService.GetChatsAsync();
-
-            foreach (var chat in serverChats)
-            {
-                Chats.Add(chat); // ✅ chat уже содержит Id и Name
-            }
-
+            var chatsFromServer = await _apiService.GetUserChatsAsync(_userId);
+            foreach (var chat in chatsFromServer)
+                Chats.Add(chat);
 
             if (Chats.Any())
             {
                 _currentChatId = Chats.First().Id;
-                ShowMessagesForCurrentChat();
                 ChatsList.SelectedItem = Chats.First();
+                ShowMessagesForCurrentChat();
             }
         }
 
         private async void SendButton_Click(object sender, RoutedEventArgs e)
         {
-            var text = MessageBox.Text;
-            if (!string.IsNullOrWhiteSpace(text))
+            var text = MessageInputBox.Text.Trim();
+            if (!string.IsNullOrEmpty(text))
             {
                 await _chatService.SendMessage(_currentChatId, text);
-                await _apiService.SendMessageToApiAsync(_currentChatId, text);
-                MessageBox.Clear();
+                await _apiService.SendMessageToApiAsync(_currentChatId, text, _username);
+
+                MessageInputBox.Clear();
+            }
+        }
+
+        private void ChatsList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (ChatsList.SelectedItem is ChatItem selected)
+            {
+                _currentChatId = selected.Id;
+                ShowMessagesForCurrentChat();
             }
         }
 
@@ -84,35 +100,30 @@ namespace QuickChat.Client
             MessagesList.ItemsSource = _chatMessages[_currentChatId];
         }
 
-        private void CreateChat_Click(object sender, RoutedEventArgs e)
+        private async void NewChat_Click(object sender, RoutedEventArgs e)
         {
-            var regWindow = new RegisterChatWindow();
-            if (regWindow.ShowDialog() == true)
+            var selectWindow = new SelectUserWindow();
+            if (selectWindow.ShowDialog() == true)
             {
-                var newChatId = regWindow.CreatedChatId;
-                var newChatName = regWindow.CreatedChatName;
+                var targetUserId = selectWindow.SelectedUserId;
+                var targetUserName = selectWindow.SelectedUserName;
 
-                Chats.Add(new ChatItem { Id = newChatId, Name = newChatName });
-            }
-        }
+                var chat = await _apiService.CreatePrivateChatAsync(_userId, targetUserId);
+                if (chat != null)
+                {
+                    chat.OtherUser = targetUserName;
+                    Chats.Add(chat);
 
-        private void JoinChat_Click(object sender, RoutedEventArgs e)
-        {
-            var joinWindow = new JoinChatWindow();
-            if (joinWindow.ShowDialog() == true)
-            {
-                var chatId = joinWindow.JoinedChatId;
-                var chatName = joinWindow.JoinedChatName;
+                    _chatMessages[chat.Id] = new ObservableCollection<MessageItem>();
 
-                Chats.Add(new ChatItem { Id = chatId, Name = chatName });
-            }
-        }
-        private void ChatsList_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (ChatsList.SelectedItem is ChatItem selected)
-            {
-                _currentChatId = selected.Id;
-                ShowMessagesForCurrentChat();
+                    _currentChatId = chat.Id;
+                    ChatsList.SelectedItem = chat;
+                    ShowMessagesForCurrentChat();
+                }
+                else
+                {
+                    MessageBox.Show("❌ Не удалось создать чат.");
+                }
             }
         }
     }

@@ -1,10 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using QuickChat.API.Data;
 using QuickChat.API.Models;
+using QuickChat.API.DTO;
+using System;
 using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using BCrypt.Net;
 
 namespace QuickChat.API.Controllers
 {
@@ -23,12 +22,10 @@ namespace QuickChat.API.Controllers
         [HttpPost("register")]
         public IActionResult Register([FromBody] RegisterRequest request)
         {
-            // Проверка: существует ли уже пользователь (без учёта регистра)
             var userExists = _context.Users.Any(u => u.Username.ToLower() == request.Username.ToLower());
             if (userExists)
                 return BadRequest("Пользователь уже существует");
 
-            // Хешируем пароль
             var hashedPassword = BCrypt.Net.BCrypt.HashPassword(request.Password);
 
             var user = new User
@@ -44,37 +41,22 @@ namespace QuickChat.API.Controllers
             _context.Users.Add(user);
             _context.SaveChanges();
 
-            return Ok(new { user.Id });
+            return Ok(user.Id);
         }
 
         // ✅ Вход
         [HttpPost("login")]
-        public IActionResult Login([FromBody] LoginRequest request)
+        public IActionResult Login([FromBody] AuthRequest request)
         {
-            var user = _context.Users.FirstOrDefault(u => u.Username.ToLower() == request.Username.ToLower());
+            var user = _context.Users.FirstOrDefault(u => u.Username == request.Username);
             if (user == null)
-                return Unauthorized("Пользователь не найден");
+                return Unauthorized();
 
             bool isPasswordValid = BCrypt.Net.BCrypt.Verify(request.Password, user.PasswordHash);
             if (!isPasswordValid)
-                return Unauthorized("Неверный пароль");
+                return Unauthorized();
 
-            return Ok(user.Id); // 🔐 Можно заменить на JWT позже
+            return Ok(user.Id);
         }
-    }
-
-    // 🔹 DTO для регистрации
-    public class RegisterRequest
-    {
-        public string Username { get; set; }
-        public string Password { get; set; }
-        public string? DisplayName { get; set; }
-    }
-
-    // 🔹 DTO для входа
-    public class LoginRequest
-    {
-        public string Username { get; set; }
-        public string Password { get; set; }
     }
 }

@@ -9,7 +9,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "QuickChat.API.Controllers.LoginRequest",
+        "Type": "QuickChat.API.DTO.AuthRequest",
         "IsRequired": true
       }
     ],
@@ -25,7 +25,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "QuickChat.API.Controllers.RegisterRequest",
+        "Type": "QuickChat.API.DTO.RegisterRequest",
         "IsRequired": true
       }
     ],
@@ -33,58 +33,37 @@
   },
   {
     "ContainingType": "QuickChat.API.Controllers.ChatController",
-    "Method": "GetAllChats",
-    "RelativePath": "api/chats",
+    "Method": "GetUserChats",
+    "RelativePath": "api/chats/{userId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
     "ContainingType": "QuickChat.API.Controllers.ChatController",
-    "Method": "CreateChat",
-    "RelativePath": "api/chats",
+    "Method": "CreatePrivateChat",
+    "RelativePath": "api/chats/private",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "name",
-        "Type": "System.String",
+        "Name": "user1Id",
+        "Type": "System.Guid",
         "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "QuickChat.API.Controllers.ChatController",
-    "Method": "CreateChat",
-    "RelativePath": "api/chats/create",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
+      },
       {
-        "Name": "request",
-        "Type": "QuickChat.API.DTO.CreateChatRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "QuickChat.API.Controllers.ChatController",
-    "Method": "JoinChat",
-    "RelativePath": "api/chats/join",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "QuickChat.API.DTO.JoinChatRequest",
-        "IsRequired": true
+        "Name": "user2Id",
+        "Type": "System.Guid",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -119,6 +98,22 @@
       },
       {
         "Name": "text",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuickChat.API.Controllers.UserController",
+    "Method": "GetByUsername",
+    "RelativePath": "api/users/by-username",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
         "Type": "System.String",
         "IsRequired": false
       }
