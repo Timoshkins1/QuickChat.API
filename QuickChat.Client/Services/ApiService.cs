@@ -6,12 +6,17 @@ using System.Threading.Tasks;
 using System.Windows;
 using QuickChat.Client.DTO;
 using QuickChat.Client.Models;
+using System.Text.Json;
 
 namespace QuickChat.Client.Services
 {
     public class ApiService
     {
         private readonly HttpClient _httpClient;
+        private readonly JsonSerializerOptions _jsonOptions = new JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true
+        };
 
         public ApiService()
         {
@@ -32,28 +37,37 @@ namespace QuickChat.Client.Services
             if (response.IsSuccessStatusCode)
             {
                 var userId = await response.Content.ReadAsStringAsync();
-                return userId.Trim('"'); // на всякий случай удаляем кавычки
+                return userId.Trim('"');
             }
             else
             {
                 var error = await response.Content.ReadAsStringAsync();
-                System.Windows.MessageBox.Show($"Ошибка входа\nКод: {response.StatusCode}\nОтвет: {error}");
+                MessageBox.Show($"Ошибка входа\nКод: {response.StatusCode}\nОтвет: {error}");
                 return null;
             }
         }
 
-
-
-
         public async Task<List<ChatItem>> GetUserChatsAsync(Guid userId)
         {
-            var response = await _httpClient.GetAsync($"/api/chats/{userId}");
-            if (response.IsSuccessStatusCode)
+            try
             {
-                return await response.Content.ReadFromJsonAsync<List<ChatItem>>();
+                var response = await _httpClient.GetAsync($"/api/chats/user/{userId}");
+                if (response.IsSuccessStatusCode)
+                {
+                    var json = await response.Content.ReadAsStringAsync();
+                    return JsonSerializer.Deserialize<List<ChatItem>>(json, _jsonOptions) ?? new();
+                }
+                else
+                {
+                    var error = await response.Content.ReadAsStringAsync();
+                    Console.WriteLine($"Ошибка при получении чатов: {error}");
+                }
             }
-
-            return new List<ChatItem>();
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Исключение при получении чатов: {ex.Message}");
+            }
+            return new();
         }
 
         public async Task<Guid?> CreatePrivateChatAsync(Guid initiatorId, Guid recipientId)
@@ -65,15 +79,14 @@ namespace QuickChat.Client.Services
             };
 
             var response = await _httpClient.PostAsJsonAsync("/api/chats/create-private", request);
-
             if (response.IsSuccessStatusCode)
             {
-                var chatId = await response.Content.ReadFromJsonAsync<Guid>();
-                return chatId;
+                return await response.Content.ReadFromJsonAsync<Guid>();
             }
 
             return null;
         }
+
         public async Task<List<MessageItem>> GetChatMessagesAsync(Guid chatId, Guid currentUserId)
         {
             var response = await _httpClient.GetAsync($"/api/messages/{chatId}");
@@ -91,7 +104,6 @@ namespace QuickChat.Client.Services
 
             return new List<MessageItem>();
         }
-
 
         public async Task<bool> SendMessageToApiAsync(Guid chatId, string text, string username)
         {

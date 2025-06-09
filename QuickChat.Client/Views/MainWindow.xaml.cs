@@ -1,4 +1,5 @@
-﻿using QuickChat.Client.Models;
+﻿
+using QuickChat.Client.Models;
 using QuickChat.Client.Services;
 using QuickChat.Client.Views;
 using System;
@@ -27,12 +28,9 @@ namespace QuickChat.Client
         public MainWindow(Guid userId, string username)
         {
             InitializeComponent();
-
             _userId = userId;
             _username = username;
-
             ChatsList.ItemsSource = Chats;
-
             Loaded += MainWindow_Loaded;
         }
 
@@ -41,20 +39,17 @@ namespace QuickChat.Client
             _chatService.MessageReceived += async (chatId, message, senderName, senderId) =>
             {
                 var id = Guid.Parse(chatId);
-
                 await Application.Current.Dispatcher.InvokeAsync(async () =>
                 {
                     if (!Chats.Any(c => c.Id == id))
                     {
                         var updatedChats = await _apiService.GetUserChatsAsync(_userId);
-
                         foreach (var newChat in updatedChats)
                         {
                             if (Chats.All(c => c.Id != newChat.Id))
                             {
                                 Chats.Add(newChat);
                                 await _chatService.JoinChatGroup(newChat.Id.ToString());
-
                                 var history = await _apiService.GetChatMessagesAsync(newChat.Id, _userId);
                                 _chatMessages[newChat.Id] = new ObservableCollection<MessageItem>(history);
                                 _cacheService.SaveMessages(newChat.Id, history);
@@ -81,29 +76,45 @@ namespace QuickChat.Client
                 });
             };
 
+            _chatService.NewChatCreated += async chatIdStr =>
+            {
+                var chatId = Guid.Parse(chatIdStr);
+                var updatedChats = await _apiService.GetUserChatsAsync(_userId);
+                foreach (var newChat in updatedChats)
+                {
+                    if (Chats.All(c => c.Id != newChat.Id))
+                    {
+                        Chats.Add(newChat);
+                        await _chatService.JoinChatGroup(newChat.Id.ToString());
+                        var history = await _apiService.GetChatMessagesAsync(newChat.Id, _userId);
+                        _chatMessages[newChat.Id] = new ObservableCollection<MessageItem>(history);
+                        _cacheService.SaveMessages(newChat.Id, history);
+                    }
+                }
+            };
+
             await _chatService.Connect(_username);
             await RefreshChatListAsync();
         }
 
-        private async void SendButton_Click(object sender, RoutedEventArgs e)
+        private async Task RefreshChatListAsync()
         {
-            var text = MessageInputBox.Text.Trim();
-            if (!string.IsNullOrEmpty(text))
+            Chats.Clear();
+            var chatsFromServer = await _apiService.GetUserChatsAsync(_userId);
+
+            foreach (var chat in chatsFromServer)
             {
-                await _apiService.SendMessageToApiAsync(_currentChatId, text, _username);
+                Chats.Add(chat);
+                var history = await _apiService.GetChatMessagesAsync(chat.Id, _userId);
+                _chatMessages[chat.Id] = new ObservableCollection<MessageItem>(history);
+                _cacheService.SaveMessages(chat.Id, history);
+                await _chatService.JoinChatGroup(chat.Id.ToString());
+            }
 
-                var message = new MessageItem
-                {
-                    Text = text,
-                    Sender = _username,
-                    SenderId = _userId,
-                    IsMine = true
-                };
-
-                _chatMessages[_currentChatId].Add(message);
-                _cacheService.SaveMessages(_currentChatId, _chatMessages[_currentChatId].ToList());
-
-                MessageInputBox.Clear();
+            if (Chats.Any())
+            {
+                _currentChatId = Chats.First().Id;
+                ChatsList.SelectedItem = Chats.First();
                 ShowMessagesForCurrentChat();
             }
         }
@@ -125,6 +136,27 @@ namespace QuickChat.Client
             }
         }
 
+        private async void SendButton_Click(object sender, RoutedEventArgs e)
+        {
+            var text = MessageInputBox.Text.Trim();
+            if (!string.IsNullOrEmpty(text))
+            {
+                await _apiService.SendMessageToApiAsync(_currentChatId, text, _username);
+                var message = new MessageItem
+                {
+                    Text = text,
+                    Sender = _username,
+                    SenderId = _userId,
+                    IsMine = true
+                };
+
+                _chatMessages[_currentChatId].Add(message);
+                _cacheService.SaveMessages(_currentChatId, _chatMessages[_currentChatId].ToList());
+                MessageInputBox.Clear();
+                ShowMessagesForCurrentChat();
+            }
+        }
+
         private async void NewChat_Click(object sender, RoutedEventArgs e)
         {
             var selectWindow = new SelectUserWindow();
@@ -136,14 +168,9 @@ namespace QuickChat.Client
                 var chatId = await _apiService.CreatePrivateChatAsync(_userId, targetUserId);
                 if (chatId.HasValue)
                 {
-                    var chat = new ChatItem
-                    {
-                        Id = chatId.Value,
-                        OtherUser = targetUserName
-                    };
-
+                    var chat = new ChatItem { Id = chatId.Value, OtherUser = targetUserName };
                     Chats.Add(chat);
-
+                    await _chatService.JoinChatGroup(chat.Id.ToString());
                     var history = await _apiService.GetChatMessagesAsync(chat.Id, _userId);
                     _chatMessages[chat.Id] = new ObservableCollection<MessageItem>(history);
                     _cacheService.SaveMessages(chat.Id, history);
@@ -151,37 +178,11 @@ namespace QuickChat.Client
                     _currentChatId = chat.Id;
                     ChatsList.SelectedItem = chat;
                     ShowMessagesForCurrentChat();
-
-                    await _chatService.JoinChatGroup(chat.Id.ToString());
                 }
                 else
                 {
                     MessageBox.Show("❌ Не удалось создать чат.");
                 }
-            }
-        }
-
-        private async Task RefreshChatListAsync()
-        {
-            Chats.Clear();
-            var chatsFromServer = await _apiService.GetUserChatsAsync(_userId);
-
-            foreach (var chat in chatsFromServer)
-            {
-                Chats.Add(chat);
-
-                var history = await _apiService.GetChatMessagesAsync(chat.Id, _userId);
-                _chatMessages[chat.Id] = new ObservableCollection<MessageItem>(history);
-                _cacheService.SaveMessages(chat.Id, history);
-
-                await _chatService.JoinChatGroup(chat.Id.ToString());
-            }
-
-            if (Chats.Any())
-            {
-                _currentChatId = Chats.First().Id;
-                ChatsList.SelectedItem = Chats.First();
-                ShowMessagesForCurrentChat();
             }
         }
     }

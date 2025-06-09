@@ -9,15 +9,22 @@ namespace QuickChat.Client.Services
         private HubConnection? _connection;
         public event Action<string, string, string, Guid>? MessageReceived;
 
+        public event Action<string>? NewChatCreated;
+
         public async Task Connect(string username)
         {
             _connection = new HubConnectionBuilder()
-                .WithUrl("http://localhost:5111/chatHub")
+                .WithUrl($"http://localhost:5111/chatHub?username={username}") // передаём username в query
                 .Build();
 
             _connection.On<string, string, string, Guid>("ReceiveMessage", (chatId, text, senderName, senderId) =>
             {
                 MessageReceived?.Invoke(chatId, text, senderName, senderId);
+            });
+
+            _connection.On<string>("NewChatCreated", chatId =>
+            {
+                NewChatCreated?.Invoke(chatId); // 🟢 вот оно!
             });
 
             await _connection.StartAsync();
