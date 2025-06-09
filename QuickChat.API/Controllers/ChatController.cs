@@ -17,8 +17,6 @@ namespace QuickChat.API.Controllers
             _context = context;
         }
 
-        // 🔹 Получить все чаты конкретного пользователя
-        [HttpGet("{userId}")]
         [HttpGet("user/{userId}")]
         public IActionResult GetUserChats(Guid userId)
         {
@@ -37,8 +35,6 @@ namespace QuickChat.API.Controllers
             return Ok(chats);
         }
 
-
-        // 🔹 Создать приватный чат между двумя пользователями (если его нет)
         [HttpPost("create-private")]
         public IActionResult CreatePrivateChat([FromBody] CreatePrivateChatRequest request)
         {
@@ -58,10 +54,11 @@ namespace QuickChat.API.Controllers
             if (existingChat != null)
                 return Ok(existingChat.Id); // Уже существует
 
-            // Создаём новый чат
+            // Создаём новый чат с двумя записями UserChat
             var chat = new Chat
             {
                 Id = Guid.NewGuid(),
+                IsGroup = false,
                 Messages = new List<Message>(),
                 UserChats = new List<UserChat>
         {

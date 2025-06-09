@@ -5,6 +5,7 @@ using QuickChat.API.Data;
 using QuickChat.API.Services;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
+using QuickChat.API.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 

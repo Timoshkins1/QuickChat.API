@@ -16,7 +16,7 @@ namespace QuickChat.Client.Services
         public ApiService()
         {
             _httpClient = new HttpClient();
-            _httpClient.BaseAddress = new Uri("http://172.16.2.124:5111");
+            _httpClient.BaseAddress = new Uri("http://localhost:5111");
         }
 
         public async Task<string> LoginAsync(string username, string password)
@@ -73,6 +73,23 @@ namespace QuickChat.Client.Services
             }
 
             return null;
+        }
+        public async Task<List<MessageItem>> GetChatMessagesAsync(Guid chatId, Guid currentUserId)
+        {
+            var response = await _httpClient.GetAsync($"/api/messages/{chatId}");
+            if (response.IsSuccessStatusCode)
+            {
+                var items = await response.Content.ReadFromJsonAsync<List<ChatMessageDto>>();
+                return items.Select(m => new MessageItem
+                {
+                    Text = m.Text,
+                    Sender = m.SenderName,
+                    SenderId = m.SenderId,
+                    IsMine = m.SenderId == currentUserId
+                }).ToList();
+            }
+
+            return new List<MessageItem>();
         }
 
 

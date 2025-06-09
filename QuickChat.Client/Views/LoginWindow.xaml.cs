@@ -8,6 +8,7 @@ namespace QuickChat.Client
     public partial class LoginWindow : Window
     {
         private readonly ApiService _apiService = new();
+        private readonly ChatService _chatService = new(); // ⬅ создаём тут
 
         public LoginWindow()
         {
@@ -23,7 +24,10 @@ namespace QuickChat.Client
 
             if (!string.IsNullOrEmpty(userIdString) && Guid.TryParse(userIdString, out var userId))
             {
-                var main = new MainWindow(userId, username);
+                // ✅ Подключение к SignalR до открытия главного окна
+                await _chatService.Connect(username);
+
+                var main = new MainWindow(userId, username); // передаём в MainWindow
                 main.Show();
                 this.Close();
             }
@@ -32,7 +36,6 @@ namespace QuickChat.Client
                 MessageBox.Show("❌ Ошибка входа. Проверьте логин и пароль.");
             }
         }
-
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {

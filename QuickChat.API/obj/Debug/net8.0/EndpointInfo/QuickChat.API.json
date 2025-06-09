@@ -67,29 +67,6 @@
         }
       }
     },
-    "/api/chats/{userId}": {
-      "get": {
-        "tags": [
-          "Chat"
-        ],
-        "parameters": [
-          {
-            "name": "userId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/api/chats/user/{userId}": {
       "get": {
         "tags": [
@@ -144,17 +121,30 @@
         }
       }
     },
-    "/api/messages": {
+    "/api/messages/{chatId}": {
       "get": {
         "tags": [
           "Messages"
+        ],
+        "parameters": [
+          {
+            "name": "chatId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
         ],
         "responses": {
           "200": {
             "description": "OK"
           }
         }
-      },
+      }
+    },
+    "/api/messages": {
       "post": {
         "tags": [
           "Messages"

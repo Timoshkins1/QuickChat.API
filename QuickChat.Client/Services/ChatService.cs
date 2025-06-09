@@ -6,30 +6,38 @@ namespace QuickChat.Client.Services
 {
     public class ChatService
     {
-        private HubConnection _hubConnection;
-        private string _username;
-
-        public event Action<string, string, string> MessageReceived;
+        private HubConnection? _connection;
+        public event Action<string, string, string, Guid>? MessageReceived;
 
         public async Task Connect(string username)
         {
-            _username = username;
-
-            _hubConnection = new HubConnectionBuilder()
-                .WithUrl("http://172.16.2.124:5111/chatHub")
+            _connection = new HubConnectionBuilder()
+                .WithUrl("http://localhost:5111/chatHub")
                 .Build();
 
-            _hubConnection.On<string, string, string>("ReceiveMessage", (chatId, message, sender) =>
+            _connection.On<string, string, string, Guid>("ReceiveMessage", (chatId, text, senderName, senderId) =>
             {
-                MessageReceived?.Invoke(chatId, message, sender);
+                MessageReceived?.Invoke(chatId, text, senderName, senderId);
             });
 
-            await _hubConnection.StartAsync();
+            await _connection.StartAsync();
+            await _connection.InvokeAsync("JoinAllUserChats", username);
         }
 
-        public async Task SendMessage(Guid chatId, string message)
+        public async Task SendMessage(string chatId, string text, string senderName, Guid senderId)
         {
-            await _hubConnection.SendAsync("SendMessage", chatId, message, _username);
+            if (_connection != null)
+            {
+                await _connection.InvokeAsync("SendMessage", chatId, text, senderName, senderId);
+            }
+        }
+
+        public async Task JoinChatGroup(string chatId)
+        {
+            if (_connection != null)
+            {
+                await _connection.InvokeAsync("JoinChatGroup", chatId);
+            }
         }
     }
 }

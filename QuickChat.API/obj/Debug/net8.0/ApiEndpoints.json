@@ -33,22 +33,6 @@
   },
   {
     "ContainingType": "QuickChat.API.Controllers.ChatController",
-    "Method": "GetUserChats",
-    "RelativePath": "api/chats/{userId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "userId",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "QuickChat.API.Controllers.ChatController",
     "Method": "CreatePrivateChat",
     "RelativePath": "api/chats/create-private",
     "HttpMethod": "POST",
@@ -81,16 +65,6 @@
   },
   {
     "ContainingType": "QuickChat.API.Controllers.MessagesController",
-    "Method": "GetAll",
-    "RelativePath": "api/messages",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "QuickChat.API.Controllers.MessagesController",
     "Method": "SendMessage",
     "RelativePath": "api/messages",
     "HttpMethod": "POST",
@@ -111,6 +85,22 @@
         "Name": "text",
         "Type": "System.String",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuickChat.API.Controllers.MessagesController",
+    "Method": "GetMessages",
+    "RelativePath": "api/messages/{chatId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "chatId",
+        "Type": "System.Guid",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
