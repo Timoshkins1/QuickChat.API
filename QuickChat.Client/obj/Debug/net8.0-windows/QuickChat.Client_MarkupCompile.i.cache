@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\user\Source\Repos\delivery\QuickChat.API\QuickChat.Client\obj\Debug\net8.0-windows\
+C:\Users\Student\Source\Repos\EspressoMaciato\EspressoMaciato\QuickChat.API\QuickChat.Client\obj\Debug\net8.0-windows\
 QuickChat.Client
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-C:\Users\user\Source\Repos\delivery\QuickChat.API\QuickChat.Client\App.xaml
+C:\Users\Student\Source\Repos\EspressoMaciato\EspressoMaciato\QuickChat.API\QuickChat.Client\App.xaml
 4-1601624142
 
 25581987347
-217-453994579
+217-400096886
 Views\LoginWindow.xaml;Views\MainWindow.xaml;Views\RegisterWindow.xaml;Views\SelectUserWindow.xaml;
 
-False
+True
 

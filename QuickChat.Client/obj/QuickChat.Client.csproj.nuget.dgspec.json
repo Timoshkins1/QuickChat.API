@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\QuickChat.Client.csproj": {}
+    "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\QuickChat.Client.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\QuickChat.Client.csproj": {
+    "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\QuickChat.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\QuickChat.Client.csproj",
+        "projectUniqueName": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\QuickChat.Client.csproj",
         "projectName": "QuickChat.Client",
-        "projectPath": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\QuickChat.Client.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Source\\Repos\\delivery\\QuickChat.API\\QuickChat.Client\\obj\\",
+        "projectPath": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\QuickChat.Client.csproj",
+        "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

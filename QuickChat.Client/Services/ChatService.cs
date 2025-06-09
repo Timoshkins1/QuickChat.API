@@ -16,7 +16,7 @@ namespace QuickChat.Client.Services
             _username = username;
 
             _hubConnection = new HubConnectionBuilder()
-                .WithUrl("http://localhost:5111/chatHub")
+                .WithUrl("http://172.16.2.124:5111/chatHub")
                 .Build();
 
             _hubConnection.On<string, string, string>("ReceiveMessage", (chatId, message, sender) =>

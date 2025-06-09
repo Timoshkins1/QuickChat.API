@@ -130,15 +130,11 @@ C:\Users\Student\Source\Repos\EspressoMaciato\EspressoMaciato\QuickChat.API\Quic
 C:\Users\Student\Source\Repos\EspressoMaciato\EspressoMaciato\QuickChat.API\QuickChat.Client\bin\Debug\net8.0-windows\System.Threading.Channels.dll
 C:\Users\Student\Source\Repos\EspressoMaciato\EspressoMaciato\QuickChat.API\QuickChat.Client\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\Student\Source\Repos\EspressoMaciato\EspressoMaciato\QuickChat.API\QuickChat.Client\obj\Debug\net8.0-windows\QuickChat.Client.csproj.AssemblyReference.cache
-C:\Users\Student\Source\Repos\EspressoMaciato\EspressoMaciato\QuickChat.API\QuickChat.Client\obj\Debug\net8.0-windows\Views\JoinChatWindow.baml
 C:\Users\Student\Source\Repos\EspressoMaciato\EspressoMaciato\QuickChat.API\QuickChat.Client\obj\Debug\net8.0-windows\Views\LoginWindow.baml
 C:\Users\Student\Source\Repos\EspressoMaciato\EspressoMaciato\QuickChat.API\QuickChat.Client\obj\Debug\net8.0-windows\Views\MainWindow.baml
-C:\Users\Student\Source\Repos\EspressoMaciato\EspressoMaciato\QuickChat.API\QuickChat.Client\obj\Debug\net8.0-windows\Views\RegisterChatWindow.baml
 C:\Users\Student\Source\Repos\EspressoMaciato\EspressoMaciato\QuickChat.API\QuickChat.Client\obj\Debug\net8.0-windows\Views\RegisterWindow.baml
-C:\Users\Student\Source\Repos\EspressoMaciato\EspressoMaciato\QuickChat.API\QuickChat.Client\obj\Debug\net8.0-windows\Views\JoinChatWindow.g.cs
 C:\Users\Student\Source\Repos\EspressoMaciato\EspressoMaciato\QuickChat.API\QuickChat.Client\obj\Debug\net8.0-windows\Views\LoginWindow.g.cs
 C:\Users\Student\Source\Repos\EspressoMaciato\EspressoMaciato\QuickChat.API\QuickChat.Client\obj\Debug\net8.0-windows\Views\MainWindow.g.cs
-C:\Users\Student\Source\Repos\EspressoMaciato\EspressoMaciato\QuickChat.API\QuickChat.Client\obj\Debug\net8.0-windows\Views\RegisterChatWindow.g.cs
 C:\Users\Student\Source\Repos\EspressoMaciato\EspressoMaciato\QuickChat.API\QuickChat.Client\obj\Debug\net8.0-windows\Views\RegisterWindow.g.cs
 C:\Users\Student\Source\Repos\EspressoMaciato\EspressoMaciato\QuickChat.API\QuickChat.Client\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\Student\Source\Repos\EspressoMaciato\EspressoMaciato\QuickChat.API\QuickChat.Client\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
@@ -159,3 +155,5 @@ C:\Users\Student\Source\Repos\EspressoMaciato\EspressoMaciato\QuickChat.API\Quic
 C:\Users\Student\Source\Repos\EspressoMaciato\EspressoMaciato\QuickChat.API\QuickChat.Client\obj\Debug\net8.0-windows\ref\QuickChat.Client.dll
 C:\Users\user\Source\Repos\delivery\QuickChat.API\QuickChat.Client\obj\Debug\net8.0-windows\Views\SelectUserWindow.baml
 C:\Users\user\Source\Repos\delivery\QuickChat.API\QuickChat.Client\obj\Debug\net8.0-windows\Views\SelectUserWindow.g.cs
+C:\Users\Student\Source\Repos\EspressoMaciato\EspressoMaciato\QuickChat.API\QuickChat.Client\obj\Debug\net8.0-windows\Views\SelectUserWindow.baml
+C:\Users\Student\Source\Repos\EspressoMaciato\EspressoMaciato\QuickChat.API\QuickChat.Client\obj\Debug\net8.0-windows\Views\SelectUserWindow.g.cs
