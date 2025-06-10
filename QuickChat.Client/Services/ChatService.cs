@@ -9,7 +9,7 @@ namespace QuickChat.Client.Services
         private HubConnection? _connection;
         public event Action<string, string, string, Guid>? MessageReceived;
 
-        public event Action<string>? NewChatCreated;
+        public event Action<string, string>? NewChatCreated;
 
         public async Task Connect(string username)
         {
@@ -22,9 +22,9 @@ namespace QuickChat.Client.Services
                 MessageReceived?.Invoke(chatId, text, senderName, senderId);
             });
 
-            _connection.On<string>("NewChatCreated", chatId =>
+            _connection.On<string, string>("NewChatCreated", (chatId, otherUsername) =>
             {
-                NewChatCreated?.Invoke(chatId); // 🟢 вот оно!
+                NewChatCreated?.Invoke(chatId, otherUsername);
             });
 
             await _connection.StartAsync();
