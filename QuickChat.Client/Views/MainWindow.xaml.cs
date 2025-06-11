@@ -159,7 +159,18 @@ namespace QuickChat.Client
                 }
             }
         }
+        private void SettingsButton_Click(object sender, RoutedEventArgs e)
+        {
+            SettingsMenu.IsOpen = true;
+        }
 
+        private async void LogoutMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            await _chatService.Disconnect();
+            var loginWindow = new LoginWindow();
+            loginWindow.Show();
+            this.Close();
+        }
         private async void NewChat_Click(object sender, RoutedEventArgs e)
         {
             var selectWindow = new SelectUserWindow();

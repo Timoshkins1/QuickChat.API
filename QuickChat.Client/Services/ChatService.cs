@@ -10,7 +10,26 @@ namespace QuickChat.Client.Services
         public event Action<string, string, string, Guid>? MessageReceived;
 
         public event Action<string, string>? NewChatCreated;
-
+        public async Task Disconnect()
+        {
+            if (_connection != null)
+            {
+                try
+                {
+                    await _connection.StopAsync();
+                    await _connection.DisposeAsync();
+                }
+                catch (Exception ex)
+                {
+                    // Логирование ошибки, если необходимо
+                    Console.WriteLine($"Ошибка при отключении: {ex.Message}");
+                }
+                finally
+                {
+                    _connection = null;
+                }
+            }
+        }
         public async Task Connect(string username)
         {
             _connection = new HubConnectionBuilder()

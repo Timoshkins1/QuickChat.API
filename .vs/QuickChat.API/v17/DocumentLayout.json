@@ -3,12 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|c:\\users\\student\\source\\repos\\espressomaciato\\espressomaciato\\quickchat.api\\quickchat.client\\models\\messageitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\models\\messageitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|c:\\users\\student\\source\\repos\\espressomaciato\\espressomaciato\\quickchat.api\\quickchat.client\\converters\\booltocolorconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\converters\\booltocolorconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|c:\\users\\student\\source\\repos\\espressomaciato\\espressomaciato\\quickchat.api\\quickchat.client\\converters\\booltoalignconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\converters\\booltoalignconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|c:\\users\\student\\source\\repos\\espressomaciato\\espressomaciato\\quickchat.api\\quickchat.client\\converters\\messagealignmentconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\converters\\messagealignmentconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|c:\\users\\student\\source\\repos\\espressomaciato\\espressomaciato\\quickchat.api\\quickchat.client\\converters\\messagebackgroundconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\converters\\messagebackgroundconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|c:\\users\\student\\source\\repos\\espressomaciato\\espressomaciato\\quickchat.api\\quickchat.client\\converters\\messagealignconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\converters\\messagealignconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|c:\\users\\student\\source\\repos\\espressomaciato\\espressomaciato\\quickchat.api\\quickchat.client\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|c:\\users\\student\\source\\repos\\espressomaciato\\espressomaciato\\quickchat.api\\quickchat.client\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|c:\\users\\student\\source\\repos\\espressomaciato\\espressomaciato\\quickchat.api\\quickchat.client\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|c:\\users\\student\\source\\repos\\espressomaciato\\espressomaciato\\quickchat.api\\quickchat.client\\services\\chatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\services\\chatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|c:\\users\\student\\source\\repos\\espressomaciato\\espressomaciato\\quickchat.api\\quickchat.client\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,14 +55,6 @@
       "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\services\\messagecacheservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|c:\\users\\student\\source\\repos\\espressomaciato\\espressomaciato\\quickchat.api\\quickchat.client\\services\\chatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\services\\chatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|c:\\users\\student\\source\\repos\\espressomaciato\\espressomaciato\\quickchat.api\\quickchat.client\\models\\messageitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\models\\messageitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|c:\\users\\student\\source\\repos\\espressomaciato\\espressomaciato\\quickchat.api\\quickchat.client\\models\\createprivatechatrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\models\\createprivatechatrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -39,24 +63,8 @@
       "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\models\\chatresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|c:\\users\\student\\source\\repos\\espressomaciato\\espressomaciato\\quickchat.api\\quickchat.client\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|c:\\users\\student\\source\\repos\\espressomaciato\\espressomaciato\\quickchat.api\\quickchat.client\\converters\\messagealignmentconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\converters\\messagealignmentconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|c:\\users\\student\\source\\repos\\espressomaciato\\espressomaciato\\quickchat.api\\quickchat.client\\converters\\booltocolorconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\converters\\booltocolorconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|c:\\users\\student\\source\\repos\\espressomaciato\\espressomaciato\\quickchat.api\\quickchat.client\\converters\\booltovisibilityconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\converters\\booltovisibilityconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|c:\\users\\student\\source\\repos\\espressomaciato\\espressomaciato\\quickchat.api\\quickchat.client\\converters\\messagealignconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\converters\\messagealignconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Student\\AppData\\Local\\Temp\\.vsdbgsrc\\ee34aec267e065140087abd7fd236fad482e6d3ee1f4162ad1b181c8d9923474\\XamlReader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -146,14 +154,6 @@
       "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\views\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|c:\\users\\student\\source\\repos\\espressomaciato\\espressomaciato\\quickchat.api\\quickchat.client\\converters\\messagebackgroundconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\converters\\messagebackgroundconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|c:\\users\\student\\source\\repos\\espressomaciato\\espressomaciato\\quickchat.api\\quickchat.client\\converters\\booltoalignconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8CF5087-7DEE-4CE4-AACA-B0B41C5E46B0}|QuickChat.Client\\QuickChat.Client.csproj|solutionrelative:quickchat.client\\converters\\booltoalignconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BAA454C3-2027-467F-A97B-3C4B08023082}|QuickChat.API\\QuickChat.API.csproj|c:\\users\\student\\source\\repos\\espressomaciato\\espressomaciato\\quickchat.api\\quickchat.api\\services\\chatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BAA454C3-2027-467F-A97B-3C4B08023082}|QuickChat.API\\QuickChat.API.csproj|solutionrelative:quickchat.api\\services\\chatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -211,7 +211,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -219,123 +219,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ChatItem.cs",
-              "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Models\\ChatItem.cs",
-              "RelativeDocumentMoniker": "QuickChat.Client\\Models\\ChatItem.cs",
-              "ToolTip": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Models\\ChatItem.cs",
-              "RelativeToolTip": "QuickChat.Client\\Models\\ChatItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T19:34:37.194Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CreatePrivateChatRequest.cs",
-              "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Models\\CreatePrivateChatRequest.cs",
-              "RelativeDocumentMoniker": "QuickChat.Client\\Models\\CreatePrivateChatRequest.cs",
-              "ToolTip": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Models\\CreatePrivateChatRequest.cs",
-              "RelativeToolTip": "QuickChat.Client\\Models\\CreatePrivateChatRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T21:31:33.908Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Views\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "QuickChat.Client\\Views\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Views\\MainWindow.xaml",
-              "RelativeToolTip": "QuickChat.Client\\Views\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-08T20:10:51.225Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ChatService.cs",
-              "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Services\\ChatService.cs",
-              "RelativeDocumentMoniker": "QuickChat.Client\\Services\\ChatService.cs",
-              "ToolTip": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Services\\ChatService.cs",
-              "RelativeToolTip": "QuickChat.Client\\Services\\ChatService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAqwBsAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T07:57:09.055Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "MessageCacheService.cs",
-              "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Services\\MessageCacheService.cs",
-              "RelativeDocumentMoniker": "QuickChat.Client\\Services\\MessageCacheService.cs",
-              "ToolTip": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Services\\MessageCacheService.cs",
-              "RelativeToolTip": "QuickChat.Client\\Services\\MessageCacheService.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAQwD4AAAAAAAAAAAAAAA==",
+              "Title": "MessageBackgroundConverter.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Converters\\MessageBackgroundConverter.cs",
+              "RelativeDocumentMoniker": "QuickChat.Client\\Converters\\MessageBackgroundConverter.cs",
+              "ToolTip": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Converters\\MessageBackgroundConverter.cs",
+              "RelativeToolTip": "QuickChat.Client\\Converters\\MessageBackgroundConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T18:39:25.29Z",
+              "WhenOpened": "2025-06-08T21:46:25.773Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ApiService.cs",
-              "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Services\\ApiService.cs",
-              "RelativeDocumentMoniker": "QuickChat.Client\\Services\\ApiService.cs",
-              "ToolTip": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Services\\ApiService.cs",
-              "RelativeToolTip": "QuickChat.Client\\Services\\ApiService.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAiwFEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T07:56:58.636Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Views\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "QuickChat.Client\\Views\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Views\\MainWindow.xaml.cs",
-              "RelativeToolTip": "QuickChat.Client\\Views\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAJkAAAAAAAAAAAAqwMUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T20:18:33.935Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MessageItem.cs",
-              "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Models\\MessageItem.cs",
-              "RelativeDocumentMoniker": "QuickChat.Client\\Models\\MessageItem.cs",
-              "ToolTip": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Models\\MessageItem.cs",
-              "RelativeToolTip": "QuickChat.Client\\Models\\MessageItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T19:40:13.786Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ChatResponse.cs",
-              "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Models\\ChatResponse.cs",
-              "RelativeDocumentMoniker": "QuickChat.Client\\Models\\ChatResponse.cs",
-              "ToolTip": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Models\\ChatResponse.cs",
-              "RelativeToolTip": "QuickChat.Client\\Models\\ChatResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T22:42:05.425Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 3,
               "Title": "MessageAlignmentConverter.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Converters\\MessageAlignmentConverter.cs",
               "RelativeDocumentMoniker": "QuickChat.Client\\Converters\\MessageAlignmentConverter.cs",
@@ -348,7 +245,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 2,
+              "Title": "BoolToAlignConverter.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Converters\\BoolToAlignConverter.cs",
+              "RelativeDocumentMoniker": "QuickChat.Client\\Converters\\BoolToAlignConverter.cs",
+              "ToolTip": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Converters\\BoolToAlignConverter.cs",
+              "RelativeToolTip": "QuickChat.Client\\Converters\\BoolToAlignConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T19:54:26.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "BoolToColorConverter.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Converters\\BoolToColorConverter.cs",
               "RelativeDocumentMoniker": "QuickChat.Client\\Converters\\BoolToColorConverter.cs",
@@ -361,32 +271,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\App.xaml",
-              "RelativeDocumentMoniker": "QuickChat.Client\\App.xaml",
-              "ToolTip": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\App.xaml",
-              "RelativeToolTip": "QuickChat.Client\\App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-11T06:12:46.057Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "BoolToVisibilityConverter.cs",
-              "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Converters\\BoolToVisibilityConverter.cs",
-              "RelativeDocumentMoniker": "QuickChat.Client\\Converters\\BoolToVisibilityConverter.cs",
-              "ToolTip": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Converters\\BoolToVisibilityConverter.cs",
-              "RelativeToolTip": "QuickChat.Client\\Converters\\BoolToVisibilityConverter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "MessageItem.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Models\\MessageItem.cs",
+              "RelativeDocumentMoniker": "QuickChat.Client\\Models\\MessageItem.cs",
+              "ToolTip": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Models\\MessageItem.cs",
+              "RelativeToolTip": "QuickChat.Client\\Models\\MessageItem.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAoAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T06:19:54.413Z",
+              "WhenOpened": "2025-06-05T19:40:13.786Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 5,
               "Title": "MessageAlignConverter.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Converters\\MessageAlignConverter.cs",
               "RelativeDocumentMoniker": "QuickChat.Client\\Converters\\MessageAlignConverter.cs",
@@ -399,7 +297,129 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 6,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Views\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "QuickChat.Client\\Views\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Views\\MainWindow.xaml",
+              "RelativeToolTip": "QuickChat.Client\\Views\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-08T20:10:51.225Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\App.xaml",
+              "RelativeDocumentMoniker": "QuickChat.Client\\App.xaml",
+              "ToolTip": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\App.xaml",
+              "RelativeToolTip": "QuickChat.Client\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-11T06:12:46.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ApiService.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Services\\ApiService.cs",
+              "RelativeDocumentMoniker": "QuickChat.Client\\Services\\ApiService.cs",
+              "ToolTip": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Services\\ApiService.cs",
+              "RelativeToolTip": "QuickChat.Client\\Services\\ApiService.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAiwFEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T07:56:58.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ChatItem.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Models\\ChatItem.cs",
+              "RelativeDocumentMoniker": "QuickChat.Client\\Models\\ChatItem.cs",
+              "ToolTip": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Models\\ChatItem.cs",
+              "RelativeToolTip": "QuickChat.Client\\Models\\ChatItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T19:34:37.194Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Views\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "QuickChat.Client\\Views\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Views\\MainWindow.xaml.cs",
+              "RelativeToolTip": "QuickChat.Client\\Views\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAqwKwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T20:18:33.935Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MessageCacheService.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Services\\MessageCacheService.cs",
+              "RelativeDocumentMoniker": "QuickChat.Client\\Services\\MessageCacheService.cs",
+              "ToolTip": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Services\\MessageCacheService.cs",
+              "RelativeToolTip": "QuickChat.Client\\Services\\MessageCacheService.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAQwD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T18:39:25.29Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ChatService.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Services\\ChatService.cs",
+              "RelativeDocumentMoniker": "QuickChat.Client\\Services\\ChatService.cs",
+              "ToolTip": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Services\\ChatService.cs",
+              "RelativeToolTip": "QuickChat.Client\\Services\\ChatService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA6wB8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T07:57:09.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CreatePrivateChatRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Models\\CreatePrivateChatRequest.cs",
+              "RelativeDocumentMoniker": "QuickChat.Client\\Models\\CreatePrivateChatRequest.cs",
+              "ToolTip": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Models\\CreatePrivateChatRequest.cs",
+              "RelativeToolTip": "QuickChat.Client\\Models\\CreatePrivateChatRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T21:31:33.908Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ChatResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Models\\ChatResponse.cs",
+              "RelativeDocumentMoniker": "QuickChat.Client\\Models\\ChatResponse.cs",
+              "ToolTip": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Models\\ChatResponse.cs",
+              "RelativeToolTip": "QuickChat.Client\\Models\\ChatResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T22:42:05.425Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "BoolToVisibilityConverter.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Converters\\BoolToVisibilityConverter.cs",
+              "RelativeDocumentMoniker": "QuickChat.Client\\Converters\\BoolToVisibilityConverter.cs",
+              "ToolTip": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Converters\\BoolToVisibilityConverter.cs",
+              "RelativeToolTip": "QuickChat.Client\\Converters\\BoolToVisibilityConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T06:19:54.413Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "RegisterWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Views\\RegisterWindow.xaml.cs",
               "RelativeDocumentMoniker": "QuickChat.Client\\Views\\RegisterWindow.xaml.cs",
@@ -411,19 +431,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "RegisterWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Views\\RegisterWindow.xaml",
               "RelativeDocumentMoniker": "QuickChat.Client\\Views\\RegisterWindow.xaml",
               "ToolTip": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Views\\RegisterWindow.xaml",
               "RelativeToolTip": "QuickChat.Client\\Views\\RegisterWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-08T20:18:57.39Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-08T20:18:57.39Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "XamlReader.cs",
               "DocumentMoniker": "C:\\Users\\Student\\AppData\\Local\\Temp\\.vsdbgsrc\\ee34aec267e065140087abd7fd236fad482e6d3ee1f4162ad1b181c8d9923474\\XamlReader.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\ee34aec267e065140087abd7fd236fad482e6d3ee1f4162ad1b181c8d9923474\\XamlReader.cs",
@@ -431,12 +450,11 @@
               "RelativeToolTip": "..\\..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\ee34aec267e065140087abd7fd236fad482e6d3ee1f4162ad1b181c8d9923474\\XamlReader.cs",
               "ViewState": "AgIAAOkBAAAAAAAAAAAEwP4BAAACAAAAAQAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T06:08:53.259Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T06:08:53.259Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "ChatDbContextModelSnapshot.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.API\\Migrations\\ChatDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "QuickChat.API\\Migrations\\ChatDbContextModelSnapshot.cs",
@@ -448,7 +466,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.API\\appsettings.json",
               "RelativeDocumentMoniker": "QuickChat.API\\appsettings.json",
@@ -460,7 +478,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.API\\Program.cs",
               "RelativeDocumentMoniker": "QuickChat.API\\Program.cs",
@@ -472,7 +490,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "ChatHub.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.API\\Hubs\\ChatHub.cs",
               "RelativeDocumentMoniker": "QuickChat.API\\Hubs\\ChatHub.cs",
@@ -484,7 +502,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "Message.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.API\\Models\\Message.cs",
               "RelativeDocumentMoniker": "QuickChat.API\\Models\\Message.cs",
@@ -496,7 +514,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "MessagesController.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.API\\Controllers\\MessagesController.cs",
               "RelativeDocumentMoniker": "QuickChat.API\\Controllers\\MessagesController.cs",
@@ -508,7 +526,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "MessagesHub.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.API\\Hubs\\MessagesHub.cs",
               "RelativeDocumentMoniker": "QuickChat.API\\Hubs\\MessagesHub.cs",
@@ -520,7 +538,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "LoginWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Views\\LoginWindow.xaml.cs",
               "RelativeDocumentMoniker": "QuickChat.Client\\Views\\LoginWindow.xaml.cs",
@@ -532,7 +550,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "MainViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\ViewModels\\MainViewModel.cs",
               "RelativeDocumentMoniker": "QuickChat.Client\\ViewModels\\MainViewModel.cs",
@@ -544,7 +562,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.API\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "QuickChat.API\\Controllers\\AuthController.cs",
@@ -556,7 +574,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "ChatController.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.API\\Controllers\\ChatController.cs",
               "RelativeDocumentMoniker": "QuickChat.API\\Controllers\\ChatController.cs",
@@ -568,7 +586,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "AuthRequest.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\DTO\\AuthRequest.cs",
               "RelativeDocumentMoniker": "QuickChat.Client\\DTO\\AuthRequest.cs",
@@ -580,7 +598,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.API\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "QuickChat.API\\Services\\AuthService.cs",
@@ -592,7 +610,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "ChatMessageDto.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\DTO\\ChatMessageDto.cs",
               "RelativeDocumentMoniker": "QuickChat.Client\\DTO\\ChatMessageDto.cs",
@@ -604,7 +622,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "Chat.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.API\\Models\\Chat.cs",
               "RelativeDocumentMoniker": "QuickChat.API\\Models\\Chat.cs",
@@ -616,7 +634,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 35,
               "Title": "LoginViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\ViewModels\\LoginViewModel.cs",
               "RelativeDocumentMoniker": "QuickChat.Client\\ViewModels\\LoginViewModel.cs",
@@ -628,7 +646,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 34,
               "Title": "SelectUserWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Views\\SelectUserWindow.xaml.cs",
               "RelativeDocumentMoniker": "QuickChat.Client\\Views\\SelectUserWindow.xaml.cs",
@@ -640,51 +658,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 36,
               "Title": "SelectUserWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Views\\SelectUserWindow.xaml",
               "RelativeDocumentMoniker": "QuickChat.Client\\Views\\SelectUserWindow.xaml",
               "ToolTip": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Views\\SelectUserWindow.xaml",
               "RelativeToolTip": "QuickChat.Client\\Views\\SelectUserWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-08T20:41:47.482Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-08T20:41:47.482Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 37,
               "Title": "LoginWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Views\\LoginWindow.xaml",
               "RelativeDocumentMoniker": "QuickChat.Client\\Views\\LoginWindow.xaml",
               "ToolTip": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Views\\LoginWindow.xaml",
               "RelativeToolTip": "QuickChat.Client\\Views\\LoginWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-07T06:50:31.774Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "MessageBackgroundConverter.cs",
-              "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Converters\\MessageBackgroundConverter.cs",
-              "RelativeDocumentMoniker": "QuickChat.Client\\Converters\\MessageBackgroundConverter.cs",
-              "ToolTip": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Converters\\MessageBackgroundConverter.cs",
-              "RelativeToolTip": "QuickChat.Client\\Converters\\MessageBackgroundConverter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-08T21:46:25.773Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "BoolToAlignConverter.cs",
-              "DocumentMoniker": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Converters\\BoolToAlignConverter.cs",
-              "RelativeDocumentMoniker": "QuickChat.Client\\Converters\\BoolToAlignConverter.cs",
-              "ToolTip": "C:\\Users\\Student\\Source\\Repos\\EspressoMaciato\\EspressoMaciato\\QuickChat.API\\QuickChat.Client\\Converters\\BoolToAlignConverter.cs",
-              "RelativeToolTip": "QuickChat.Client\\Converters\\BoolToAlignConverter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T19:54:26.38Z"
+              "WhenOpened": "2025-06-07T06:50:31.774Z"
             },
             {
               "$type": "Document",
