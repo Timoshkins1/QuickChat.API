@@ -55,19 +55,30 @@ namespace QuickChat.Client.Services
                 if (response.IsSuccessStatusCode)
                 {
                     var json = await response.Content.ReadAsStringAsync();
-                    return JsonSerializer.Deserialize<List<ChatItem>>(json, _jsonOptions) ?? new();
-                }
-                else
-                {
-                    var error = await response.Content.ReadAsStringAsync();
-                    Console.WriteLine($"Ошибка при получении чатов: {error}");
+                    var chats = JsonSerializer.Deserialize<List<ChatItem>>(json, _jsonOptions) ?? new();
+
+                    // Заполняем DisplayName (можно добавить запрос к API для получения имён)
+                    foreach (var chat in chats)
+                    {
+                        chat.DisplayName = await GetUserDisplayName(chat.OtherUser);
+                    }
+                    return chats;
                 }
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Исключение при получении чатов: {ex.Message}");
-            }
+            catch { /* обработка ошибок */ }
             return new();
+        }
+
+        private async Task<string> GetUserDisplayName(string username)
+        {
+            // Реализуйте запрос к API для получения отображаемого имени
+            // Например:
+            var response = await _httpClient.GetAsync($"/api/users/{username}/displayname");
+            if (response.IsSuccessStatusCode)
+            {
+                return await response.Content.ReadAsStringAsync();
+            }
+            return username; // Возвращаем логин, если не получилось получить имя
         }
 
         public async Task<Guid?> CreatePrivateChatAsync(Guid initiatorId, Guid recipientId)

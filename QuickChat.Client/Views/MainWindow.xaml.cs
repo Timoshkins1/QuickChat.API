@@ -91,9 +91,28 @@ namespace QuickChat.Client
 
             foreach (var chat in chatsFromServer)
             {
-                Chats.Add(chat);
+                // Добавляем чат в список
+                var chatItem = new ChatItem
+                {
+                    Id = chat.Id,
+                    OtherUser = chat.OtherUser
+                    // UserColor сгенерируется автоматически
+                };
+                Chats.Add(chatItem);
+
+                // Загружаем историю сообщений
                 var history = await _apiService.GetChatMessagesAsync(chat.Id, _userId);
-                _chatMessages[chat.Id] = new ObservableCollection<MessageItem>(history);
+                _chatMessages[chat.Id] = new ObservableCollection<MessageItem>(
+                    history.Select(m => new MessageItem
+                    {
+                        Text = m.Text,
+                        Sender = m.Sender,
+                        SenderId = m.SenderId,
+                        IsMine = m.SenderId == _userId
+                        // SenderColor сгенерируется автоматически
+                    })
+                );
+
                 _cacheService.SaveMessages(chat.Id, history);
                 await _chatService.JoinChatGroup(chat.Id.ToString());
             }

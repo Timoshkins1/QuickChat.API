@@ -17,10 +17,6 @@
         <SolidColorBrush x:Key="MessageBrush" Color="#333333"/>
         <SolidColorBrush x:Key="MessageMineBrush" Color="#FF8C00"/>
 
-        <!-- Конвертеры -->
-        <local:MessageColorConverter x:Key="MessageColorConverter"/>
-        <local:MessageAlignmentConverter x:Key="MessageAlignmentConverter"/>
-
         <Style TargetType="Button">
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="Background" Value="{StaticResource AccentBrush}"/>
@@ -38,6 +34,20 @@
             <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="Padding" Value="5"/>
         </Style>
+
+        <!-- Стиль для списка чатов -->
+        <Style TargetType="ListBoxItem">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListBoxItem">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
 
     <Grid>
@@ -46,59 +56,105 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <!-- Sidebar -->
+        <!-- Боковая панель -->
         <Border Grid.Column="0" Background="{StaticResource SidebarBrush}" Padding="10">
             <StackPanel>
                 <Button Content="Новый чат" Click="NewChat_Click"/>
-                <TextBlock Text="Ваши чаты" FontSize="16" FontWeight="Bold" Foreground="{StaticResource AccentBrush}" Margin="5,20,5,10"/>
-                <ListBox x:Name="ChatsList" DisplayMemberPath="OtherUser" 
-                         Background="Transparent"
-                         Foreground="White"
-                         BorderThickness="0"
-                         SelectionChanged="ChatsList_SelectionChanged"/>
+                <TextBlock Text="Ваши чаты" 
+                           FontSize="16" 
+                           FontWeight="Bold" 
+                           Foreground="{StaticResource AccentBrush}" 
+                           Margin="5,20,5,10"/>
+
+                <!-- Список чатов с цветными кружками -->
+                <ListBox x:Name="ChatsList" 
+         Background="Transparent"
+         Foreground="White"
+         BorderThickness="0"
+         SelectionChanged="ChatsList_SelectionChanged">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Margin="5,3">
+                                <Border Width="16" 
+                        Height="16"
+                        CornerRadius="8"
+                        Background="{Binding UserColor}"
+                        Margin="0,0,8,0"
+                        VerticalAlignment="Center"/>
+                                <!-- Используем DisplayName вместо OtherUser -->
+                                <TextBlock Text="{Binding OtherUser}" 
+                           VerticalAlignment="Center"
+                           FontSize="14"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
             </StackPanel>
         </Border>
 
-        <!-- Chat area -->
+        <!-- Область чата -->
         <Grid Grid.Column="1" Background="{StaticResource BackgroundBrush}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
-            <!-- Messages -->
+            <!-- Список сообщений -->
             <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="10">
                 <ItemsControl x:Name="MessagesList">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
-                            <Grid>
-                                <Border Background="{Binding IsMine, Converter={StaticResource MessageColorConverter}}"
-                                        HorizontalAlignment="{Binding IsMine, Converter={StaticResource MessageAlignmentConverter}}"
-                                        CornerRadius="8"
-                                        Padding="10"
-                                        MaxWidth="400"
-                                        Margin="5">
-                                    <StackPanel>
-                                        <TextBlock Text="{Binding Sender}"
-                                                   Foreground="#AAAAAA"
-                                                   FontWeight="Bold"
-                                                   FontSize="11"
-                                                   Margin="0,0,0,5"/>
-                                        <TextBlock Text="{Binding Text}"
-                                                   Foreground="White"
-                                                   TextWrapping="Wrap"/>
-                                    </StackPanel>
-                                </Border>
+                            <Grid Margin="0,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <!-- Аватарка (только для входящих сообщений) -->
+                                <Border Grid.Column="0"
+                                    Width="32"
+                                    Height="32"
+                                    CornerRadius="16"
+                                    Background="{Binding SenderColor}"
+                                    Margin="0,0,10,0"
+                                    VerticalAlignment="Top"
+                                    Visibility="{Binding IsMine, Converter={StaticResource BoolToVisibilityConverter}, ConverterParameter=inverse}"/>
+                                                            <!-- Контейнер сообщения -->
+                                <Grid Grid.Column="1"
+                  HorizontalAlignment="{Binding IsMine, Converter={StaticResource MessageAlignmentConverter}}">
+
+                                    <!-- Сообщение -->
+                                    <Border Background="{Binding IsMine, Converter={StaticResource MessageColorConverter}}"
+                        CornerRadius="8"
+                        Padding="10"
+                        MaxWidth="400">
+                                        <StackPanel>
+                                            <TextBlock Text="{Binding Sender}"
+                                   Foreground="#AAAAAA"
+                                   FontWeight="Bold"
+                                   FontSize="11"
+                                   Margin="0,0,0,5"/>
+                                            <TextBlock Text="{Binding Text}"
+                                   Foreground="White"
+                                   TextWrapping="Wrap"/>
+                                        </StackPanel>
+                                    </Border>
+                                </Grid>
                             </Grid>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
             </ScrollViewer>
 
-            <!-- Input -->
+            <!-- Поле ввода -->
             <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="10">
-                <TextBox x:Name="MessageInputBox" Width="600" Margin="0,0,10,0" Height="35" />
-                <Button Content="Отправить" Width="100" Click="SendButton_Click"/>
+                <TextBox x:Name="MessageInputBox" 
+                         Width="600" 
+                         Margin="0,0,10,0" 
+                         Height="35" />
+                <Button Content="Отправить" 
+                        Width="100" 
+                        Click="SendButton_Click"/>
             </StackPanel>
         </Grid>
     </Grid>

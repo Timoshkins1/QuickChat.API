@@ -60,7 +60,7 @@ namespace QuickChat.Client.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/QuickChat.Client;component/views/selectuserwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/QuickChat.Client;V1.0.0.0;component/views/selectuserwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\SelectUserWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
