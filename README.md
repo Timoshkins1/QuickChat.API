@@ -55,7 +55,6 @@
 ---
 
 ## 🧱 Структура проекта
-
 QuickChat/
 ├── QuickChat.API/ # Сервер
 │ ├── Controllers/ # REST API
@@ -68,9 +67,6 @@ QuickChat/
 │ ├── Models/ # Данные сообщений и чатов
 │ ├── Services/ # ApiService, ChatService и т.д.
 │ └── MainWindow.xaml # Основное окно чата
-
-
-
 ---
 
 ## 🐘 Настройка PostgreSQL
