@@ -13,7 +13,7 @@ namespace QuickChat.Client.Views
 
         private readonly HttpClient _httpClient = new()
         {
-            BaseAddress = new Uri("http://localhost:5111") // измени на нужный порт, если другой
+            BaseAddress = new Uri("http://26.207.53.154:5111") // измени на нужный порт, если другой
         };
 
         public SelectUserWindow()

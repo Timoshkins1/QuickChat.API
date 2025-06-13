@@ -22,7 +22,7 @@ namespace QuickChat.Client.Services
         public ApiService()
         {
             _httpClient = new HttpClient();
-            _httpClient.BaseAddress = new Uri("http://localhost:5111");
+            _httpClient.BaseAddress = new Uri("http://26.207.53.154:5111");
         }
 
         public async Task<string> LoginAsync(string username, string password)

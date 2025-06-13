@@ -33,7 +33,7 @@ namespace QuickChat.Client.Services
         public async Task Connect(string username)
         {
             _connection = new HubConnectionBuilder()
-                .WithUrl($"http://localhost:5111/chatHub?username={username}") // передаём username в query
+                .WithUrl($"http://26.207.53.154:5111/chatHub?username={username}") // передаём username в query
                 .Build();
 
             _connection.On<string, string, string, Guid>("ReceiveMessage", (chatId, text, senderName, senderId) =>
