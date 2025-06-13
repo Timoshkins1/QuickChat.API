@@ -45,6 +45,9 @@ namespace QuickChat.API.Controllers
             if (sender == null)
                 return BadRequest("Пользователь не найден");
 
+            // 🟢 Обновляем LastOnline
+            sender.LastOnline = DateTime.UtcNow;
+
             var chat = await _db.Chats.FirstOrDefaultAsync(c => c.Id == chatId);
             if (chat == null)
                 return BadRequest("Чат не найден");
@@ -60,6 +63,7 @@ namespace QuickChat.API.Controllers
 
             _db.Messages.Add(message);
             await _db.SaveChangesAsync();
+
 
             await _hub.Clients.Group(chatId.ToString())
                 .SendAsync("ReceiveMessage", chatId.ToString(), text, sender.Name, sender.Id);

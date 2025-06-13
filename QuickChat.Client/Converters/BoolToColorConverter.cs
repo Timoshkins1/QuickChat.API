@@ -10,8 +10,8 @@ namespace QuickChat.Client.Converters
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             return (bool)value
-                ? new SolidColorBrush(Color.FromRgb(173, 216, 230)) // голубой
-                : new SolidColorBrush(Color.FromRgb(230, 230, 230)); // серый
+                ? new SolidColorBrush(Color.FromRgb(0, 200, 0)) // зелёный
+                : new SolidColorBrush(Color.FromRgb(120, 120, 120)); // серый
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

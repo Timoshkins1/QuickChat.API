@@ -1,15 +1,41 @@
-﻿public class ChatItem
+﻿using System;
+using System.ComponentModel;
+using System.Windows.Media;
+
+namespace QuickChat.Client.Models
 {
-    public Guid Id { get; set; }
-    public string OtherUser { get; set; } // Логин (оставляем для внутреннего использования)
-    public string DisplayName { get; set; } // Добавляем новое свойство для отображаемого имени
-
-    public string UserColor => GenerateColorFromGuid(Id);
-
-    private static string GenerateColorFromGuid(Guid id)
+    public class ChatItem : INotifyPropertyChanged
     {
-        var hash = id.GetHashCode();
-        var random = new Random(hash);
-        return $"#{random.Next(0x99, 0xEE):X2}{random.Next(0x99, 0xEE):X2}{random.Next(0x99, 0xEE):X2}";
+        private bool _isOnline;
+        private string _displayName;
+
+        public Guid Id { get; set; }
+        public string OtherUser { get; set; }
+
+        public Brush UserColor { get; set; }
+
+        public bool IsOnline
+        {
+            get => _isOnline;
+            set
+            {
+                _isOnline = value;
+                OnPropertyChanged(nameof(IsOnline));
+            }
+        }
+
+        public string DisplayName
+        {
+            get => _displayName;
+            set
+            {
+                _displayName = value;
+                OnPropertyChanged(nameof(DisplayName));
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged(string propertyName) =>
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 }

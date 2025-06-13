@@ -8,6 +8,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
+using System.Windows.Media;
 
 namespace QuickChat.Client
 {
@@ -82,25 +84,34 @@ namespace QuickChat.Client
             };
 
             await RefreshChatListAsync();
+
+            // ✅ Вызовем обновление онлайн-статусов только один раз
+            _ = StartUpdatingStatuses();
         }
+
 
         private async Task RefreshChatListAsync()
         {
             Chats.Clear();
+
             var chatsFromServer = await _apiService.GetUserChatsAsync(_userId);
 
             foreach (var chat in chatsFromServer)
             {
-                // Добавляем чат в список
-                var chatItem = new ChatItem
+                // Назначаем цвет, если отсутствует
+                if (chat.UserColor == null)
                 {
-                    Id = chat.Id,
-                    OtherUser = chat.OtherUser
-                    // UserColor сгенерируется автоматически
-                };
-                Chats.Add(chatItem);
+                    chat.UserColor = new SolidColorBrush(GetColorFromString(chat.OtherUser));
+                }
 
-                // Загружаем историю сообщений
+                // Назначаем имя, если не пришло
+                if (string.IsNullOrWhiteSpace(chat.DisplayName))
+                {
+                    chat.DisplayName = chat.OtherUser;
+                }
+
+                Chats.Add(chat);
+
                 var history = await _apiService.GetChatMessagesAsync(chat.Id, _userId);
                 _chatMessages[chat.Id] = new ObservableCollection<MessageItem>(
                     history.Select(m => new MessageItem
@@ -109,7 +120,6 @@ namespace QuickChat.Client
                         Sender = m.Sender,
                         SenderId = m.SenderId,
                         IsMine = m.SenderId == _userId
-                        // SenderColor сгенерируется автоматически
                     })
                 );
 
@@ -125,13 +135,47 @@ namespace QuickChat.Client
             }
         }
 
+
         private void ChatsList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (ChatsList.SelectedItem is ChatItem selected)
             {
                 _currentChatId = selected.Id;
-                ShowMessagesForCurrentChat();
+
+                if (_chatMessages.TryGetValue(_currentChatId, out var messages))
+                {
+                    MessagesList.ItemsSource = messages;
+                }
+                else
+                {
+                    MessagesList.ItemsSource = null;
+                }
             }
+        }
+
+
+        private Color GetColorFromString(string input)
+        {
+            int hash = input.GetHashCode();
+            byte r = (byte)((hash >> 16) & 0xFF);
+            byte g = (byte)((hash >> 8) & 0xFF);
+            byte b = (byte)(hash & 0xFF);
+            return Color.FromRgb(r, g, b);
+        }
+
+        private static T FindVisualChild<T>(DependencyObject obj) where T : DependencyObject
+        {
+            for (int i = 0; i < VisualTreeHelper.GetChildrenCount(obj); i++)
+            {
+                var child = VisualTreeHelper.GetChild(obj, i);
+                if (child is T childOfType)
+                    return childOfType;
+
+                var childOfChild = FindVisualChild<T>(child);
+                if (childOfChild != null)
+                    return childOfChild;
+            }
+            return null;
         }
 
         private void ShowMessagesForCurrentChat()
@@ -139,11 +183,44 @@ namespace QuickChat.Client
             if (_chatMessages.TryGetValue(_currentChatId, out var messages))
             {
                 MessagesList.ItemsSource = messages;
+
+                // Прокрутка вниз — отложена, чтобы сработало после визуализации
+                Application.Current.Dispatcher.InvokeAsync(() =>
+                {
+                    var scrollViewer = FindVisualChild<ScrollViewer>(MessagesList);
+                    scrollViewer?.ScrollToEnd();
+                }, System.Windows.Threading.DispatcherPriority.Loaded);
             }
         }
 
+        private async Task StartUpdatingStatuses()
+        {
+            while (true)
+            {
+                try
+                {
+                    var statuses = await _apiService.GetUserStatusesAsync();
+
+                    foreach (var chat in Chats)
+                    {
+                        var status = statuses.FirstOrDefault(s => s.Username == chat.OtherUser);
+                        if (status != null)
+                            chat.IsOnline = status.IsOnline;
+                    }
+                }
+                catch
+                {
+                    // игнорируем ошибки
+                }
+
+                await Task.Delay(30000); // обновление каждые 30 секунд
+            }
+        }
+
+
         private async void SendButton_Click(object sender, RoutedEventArgs e)
         {
+
             var text = MessageInputBox.Text.Trim();
             if (!string.IsNullOrEmpty(text))
             {
@@ -159,6 +236,15 @@ namespace QuickChat.Client
                 }
             }
         }
+        private void MessageInputBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter && !Keyboard.IsKeyDown(Key.LeftCtrl) && !Keyboard.IsKeyDown(Key.RightCtrl))
+            {
+                e.Handled = true; // чтобы не добавлял новую строку
+                SendButton_Click(null, null);
+            }
+        }
+
         private void SettingsButton_Click(object sender, RoutedEventArgs e)
         {
             SettingsMenu.IsOpen = true;

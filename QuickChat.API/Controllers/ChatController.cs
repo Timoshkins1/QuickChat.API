@@ -32,8 +32,20 @@ namespace QuickChat.API.Controllers
                 })
                 .ToList();
 
-            return Ok(chats);
+            var result = chats.Select(c =>
+            {
+                var user = _context.Users.FirstOrDefault(u => u.Username == c.OtherUser);
+                return new
+                {
+                    c.Id,
+                    OtherUser = c.OtherUser,
+                    IsOnline = user?.IsOnline ?? false
+                };
+            });
+
+            return Ok(result);
         }
+
 
         [HttpPost("create-private")]
         public IActionResult CreatePrivateChat([FromBody] CreatePrivateChatRequest request)

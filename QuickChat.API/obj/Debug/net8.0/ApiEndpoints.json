@@ -107,6 +107,22 @@
   },
   {
     "ContainingType": "QuickChat.API.Controllers.UserController",
+    "Method": "IsUserOnline",
+    "RelativePath": "api/users/{username}/isonline",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuickChat.API.Controllers.UserController",
     "Method": "GetByUsername",
     "RelativePath": "api/users/by-username",
     "HttpMethod": "GET",
@@ -119,6 +135,16 @@
         "IsRequired": false
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "QuickChat.API.Controllers.UserController",
+    "Method": "GetUserStatuses",
+    "RelativePath": "api/users/statuses",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   }
 ]

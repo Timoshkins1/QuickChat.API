@@ -28,6 +28,7 @@ namespace QuickChat.Client.ViewModels
             await _chatService.Connect(_username);
         }
 
+
         // ты можешь вызвать этот метод из UI, если хочешь использовать VM:
         public async Task<Guid?> CreateChatWith(Guid targetUserId)
         {

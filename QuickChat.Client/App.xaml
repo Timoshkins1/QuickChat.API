@@ -11,6 +11,7 @@
         <SolidColorBrush x:Key="TextBrush" Color="White"/>
 
         <!-- Конвертеры -->
+        <local:BoolToColorConverter x:Key="BoolToColorConverter"/>
         <local:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
         <local:MessageAlignmentConverter x:Key="MessageAlignmentConverter"/>
         <converters:MessageAlignConverter x:Key="MessageAlignConverter"/>

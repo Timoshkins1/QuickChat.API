@@ -7,6 +7,7 @@ using System.Windows;
 using QuickChat.Client.DTO;
 using QuickChat.Client.Models;
 using System.Text.Json;
+using System.Windows.Media;
 
 namespace QuickChat.Client.Services
 {
@@ -55,19 +56,43 @@ namespace QuickChat.Client.Services
                 if (response.IsSuccessStatusCode)
                 {
                     var json = await response.Content.ReadAsStringAsync();
-                    var chats = JsonSerializer.Deserialize<List<ChatItem>>(json, _jsonOptions) ?? new();
+                    var chats = JsonSerializer.Deserialize<List<ChatDto>>(json, _jsonOptions);
 
-                    // Заполняем DisplayName (можно добавить запрос к API для получения имён)
+                    var chatItems = new List<ChatItem>();
                     foreach (var chat in chats)
                     {
-                        chat.DisplayName = await GetUserDisplayName(chat.OtherUser);
+                        var displayName = await GetUserDisplayName(chat.OtherUser);
+
+                        var item = new ChatItem
+                        {
+                            Id = chat.Id,
+                            OtherUser = chat.OtherUser,
+                            DisplayName = displayName,
+                            IsOnline = chat.IsOnline,
+                            UserColor = new SolidColorBrush(GetColorFromString(chat.OtherUser))
+                        };
+
+                        chatItems.Add(item);
                     }
-                    return chats;
+
+                    return chatItems;
                 }
             }
-            catch { /* обработка ошибок */ }
-            return new();
+            catch { }
+
+            return new List<ChatItem>();
         }
+
+
+        private Color GetColorFromString(string input)
+        {
+            int hash = input.GetHashCode();
+            byte r = (byte)((hash >> 16) & 0xFF);
+            byte g = (byte)((hash >> 8) & 0xFF);
+            byte b = (byte)(hash & 0xFF);
+            return Color.FromRgb(r, g, b);
+        }
+
 
         private async Task<string> GetUserDisplayName(string username)
         {
@@ -134,5 +159,23 @@ namespace QuickChat.Client.Services
             var response = await _httpClient.PostAsJsonAsync("/api/auth/register", request);
             return response.IsSuccessStatusCode;
         }
+
+        public async Task<List<UserStatus>> GetUserStatusesAsync()
+        {
+            var response = await _httpClient.GetAsync("/api/users/statuses");
+            response.EnsureSuccessStatusCode();
+
+            var json = await response.Content.ReadAsStringAsync();
+            return JsonSerializer.Deserialize<List<UserStatus>>(json, _jsonOptions);
+        }
+
+        public class UserStatus
+        {
+            public Guid Id { get; set; }
+            public string Username { get; set; }
+            public bool IsOnline { get; set; }
+        }
+
+
     }
 }

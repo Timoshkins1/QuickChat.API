@@ -38,6 +38,18 @@ namespace QuickChat.Client.Views
                 var user = await response.Content.ReadFromJsonAsync<UserDto>(
                     new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
+                // ➕ ПРОВЕРКА: в сети ли пользователь
+                var statusResponse = await _httpClient.GetAsync($"/api/users/{login}/isonline");
+                bool isOnline = false;
+                if (statusResponse.IsSuccessStatusCode)
+                {
+                    var statusStr = await statusResponse.Content.ReadAsStringAsync();
+                    isOnline = bool.Parse(statusStr);
+                }
+
+                // ➕ Показываем результат
+                MessageBox.Show($"{user.Name} {(isOnline ? "в сети" : "не в сети")}");
+
                 SelectedUserId = user.Id;
                 SelectedUserName = user.Name;
 
@@ -50,6 +62,7 @@ namespace QuickChat.Client.Views
                 MessageBox.Show($"Пользователь не найден.\n\nОтвет сервера: {msg}");
             }
         }
+
 
         private class UserDto
         {
