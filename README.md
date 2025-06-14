@@ -4,7 +4,6 @@
 ![WPF](https://img.shields.io/badge/WPF-Клиент-orange)
 ![SignalR](https://img.shields.io/badge/SignalR-Мгновенно-success)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-БД-blue)
-![License](https://img.shields.io/badge/Лицензия-MIT-lightgrey)
 
 > Простое и современное десктопное приложение для общения: приватные чаты, статусы онлайн, моментальная доставка сообщений и чистый интерфейс.
 
